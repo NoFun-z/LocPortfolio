@@ -13,20 +13,33 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
-    screens: {
-      'widescreen': { 'raw': '(min-aspect-ratio: 3/2)' },
-      'tallscreen': { 'raw': '(max-aspect-ratio: 13/20)' },
+      paddingTop: {
+        '144.78px': '144.78px',
+      },
     },
     keyframes: {
       'open-menu': {
-        '0%': { transform: 'scaleY(0)' },
-        '80%': { transform: 'scaleY(1.2)' },
-        '100%': { transform: 'scaleY(1)' },
+        '0%': { transform: 'translateY(-150%)' },
+        '100%': { transform: 'translateY(0%)' },
+      },
+      'close-menu': {
+        '0%': { transform: 'translateY(0)' },
+        '100%': { transform: 'translateY(-150%)' },
+      },
+      'open-menu-layout': {
+        '0%': { transform: 'translateY(200%)' },
+        '100%': { transform: 'translateY(50%)' },
+      },
+      'close-menu-layout': {
+        '0%': { transform: 'translateY(50%)' },
+        '100%': { transform: 'translateY(200%)' },
       },
     },
     animation: {
       'open-menu': 'open-menu 0.5s ease-in-out forwards',
+      'close-menu': 'close-menu 0.5s ease-in-out forwards',
+      'open-menu-layout': 'open-menu-layout 0.5s ease-in-out forwards',
+      'close-menu-layout': 'close-menu-layout 0.5s ease-in-out forwards',
     }
   },
   plugins: [],

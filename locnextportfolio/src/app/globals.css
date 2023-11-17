@@ -18,10 +18,41 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-color: rgba(233, 228, 228, 0.507);
+  background-clip: content-box;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(54, 60, 70, 0.8);
+}
+
+@layer utilities {
+  .section-min-height {
+    min-height: calc(100vh - 144.78px)
+  }
+
+  .toggle-btn {
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent
+  }
+
+  .scrolledY {
+    @apply -translate-y-full
+  }
+
+  .scrolled {
+    @apply fixed transition-transform duration-500 ease-out before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full md:before:backdrop-blur-xl md:before:bg-slate-800/40 text-gray-300 translate-y-0
+  }
+
+  .disable-scrolling {
+    @apply fixed overflow-y-scroll
+  }
 }
