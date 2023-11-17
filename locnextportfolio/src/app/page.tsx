@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <div className='flex flex-col space-y-3 p-2 w-full'>
           <p>My name is Loc Pham</p>
           <p className='text-green-600'>A passionate developer</p>
+          <GitHubIcon/>
         </div>
         <img className="w-1/2" src="./img/rocketdab.png" alt="Rocket Dab" />
       </section>
