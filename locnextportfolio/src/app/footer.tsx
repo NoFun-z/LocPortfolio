@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <>
             {/* Footer */}
-            <section className="relative z-30 bottom-0 w-full p-4
+            <section className="relative z-30 bottom-0 w-full pt-5 pb-8
              bg-slate-800 flex flex-col justify-center items-center">
                 <p className='pb-3'>LocPham-NextJs-Portfolio&copy; 2023</p>
                 <a className="p-3 bg-slate-700 rounded hover:bg-slate-300

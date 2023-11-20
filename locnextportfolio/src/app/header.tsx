@@ -123,9 +123,10 @@ export default function Header(props: any) {
                         <Image
                             src='/Images/Loc-Logo.png'
                             alt='logo'
-                            width={200}
-                            height={200}
+                            width={160}
+                            height={160}
                             className='cursor-pointer'
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                     </Link>
                     <div>
