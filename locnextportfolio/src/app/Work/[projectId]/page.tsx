@@ -10,7 +10,7 @@ export default function ProjectDetails() {
 
 export async function getStaticPaths() {
   const client = await MongoClient.connect(
-    'mongodb+srv://hoangloc1511:Xixc3SnK8pzHH0mE@cluster0.2jdqnje.mongodb.net/?retryWrites=true&w=majority'
+    
   );
 
   const db = client.db();
@@ -37,7 +37,7 @@ export async function getStaticProps(context: any) {
   const projectId: ObjectId = context.params.projectId;
 
   const client = await MongoClient.connect(
-    'mongodb+srv://hoangloc1511:Xixc3SnK8pzHH0mE@cluster0.2jdqnje.mongodb.net/?retryWrites=true&w=majority'
+    
   );
 
   const db = client.db('locnextportfolio');
