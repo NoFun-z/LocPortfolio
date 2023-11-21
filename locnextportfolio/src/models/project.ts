@@ -1,8 +1,11 @@
+import { ObjectId } from "mongodb";
+
 export interface Project{
+    id: string,
     name: string,
-    description: string,
     technologies: string,
-    publishedDate: Date,
+    description: string,
+    publishedDate: string,
     pictureURL: string,
     publishedLink: string,
     githubLink: string,

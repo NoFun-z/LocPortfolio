@@ -1,39 +1,59 @@
+'use client'
+
 import { Project } from '@/models/project'
-import { Card, CardHeader, Avatar, CardMedia, CardContent, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 interface IProject {
     project: Project
 }
 
 export default function ProjectCard({ project }: IProject) {
-    return (
-        <Card>
-            <CardHeader avatar={
-                <Avatar sx={{ bgcolor: 'secondary.main' }}>
-                    {project.name.charAt(0).toLocaleUpperCase()}
-                </Avatar>
+
+    const [substringLength, setSubstringLength] = useState(45);
+
+    useEffect(() => {
+        const calculateSubstringLength = () => {
+            if (window.innerWidth >= 1200) {
+                return 38; // Use the full length for larger screens
+            } else if (window.innerWidth >= 768) {
+                return 28; // Use a shorter substring for medium-sized screens
+            } else {
+                return 30; // Use an even shorter substring for smaller screens
             }
-                title={project.name}
-                titleTypographyProps={{
-                    sx: { fontWeight: 'bold', color: '#46a3b4' }
-                }}
-            />
-            <CardMedia
-                sx={{ height: 140, backgroundSize: 'contain', bgcolor: 'primary.light' }}
-                image={project.pictureURL}
-                title={project.name}
-            />
-            <CardContent sx={{ paddingBottom: '5px' }}>
-                <Typography gutterBottom sx={{ display: 'flex', alignItems: 'center', whiteSpace: 'pre-wrap' }} color='secondary' variant="h6">
-                    <span style={{ textDecoration: 'line-through' }}>{project.technologies}</span>
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {project.description.length > 80
-                        ? `${project.description.substring(0, 80)}...`
-                        : project.description}
-                </Typography>
-            </CardContent>
-        </Card>
+        };
+
+        setSubstringLength(calculateSubstringLength());
+
+        const handleResize = () => {
+            setSubstringLength(calculateSubstringLength());
+        };
+
+        // Attach the event listener when the component mounts
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return (
+        <Link href={`/Work/${project.id}`} className='hover:cursor-pointer'>
+            <div className="hover:scale-110 transition-transform duration-300 ease-out relative before:content-['']
+             before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
+             before:backdrop-blur-xl before:bg-slate-600/40 p-4 before:rounded">
+                <p className="pt-5 text-center font-bold text-xl text-gray-300">{project.name}</p>
+                <Image className="pt-5" src={project.pictureURL} alt={project.name}
+                    width={750} height={750} />
+                <div className="pb-5 pt-5">
+                    <p className="whitespace-pre-wrap text-lg text-gray-300">
+                        <span>{project.technologies.substring(0, substringLength)}...</span>
+                    </p>
+                    <p className='mt-5 text-gray-300'>Click to view</p>
+                </div>
+            </div>
+        </Link>
     )
 }

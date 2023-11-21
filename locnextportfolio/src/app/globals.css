@@ -16,8 +16,42 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
+}
+
+.search-bar {
+  opacity: 0;
+  padding-right: 8px;
+  font-size: medium;
+  border: none;
+  outline: none;
+  width: 45px;
+  transition: width 0.3s ease;
+  cursor: pointer;
+}
+
+.search-bar.focused {
+  opacity: 1;
+  width: 140px;
+  cursor: text;
+  margin-right: 5px;
+}
+
+.search-bar.focused::placeholder {
+  color: #393e5b;
+}
+
+.filter-arrow-icon {
+  transition: transform 0.2s ease-out;
+}
+
+.filter-arrow-icon.expanded {
+  transform: rotate(180deg);
 }
 
 body::-webkit-scrollbar {

@@ -8,7 +8,7 @@ function Experience() {
   const { serviceImages } = useImages();
 
   return (
-    <div className="pt-8 md:pt-14 flex flex-col justify-between">
+    <div className="pt-8 md:pt-14 flex flex-col">
       <p className='mb-10 text-lg md:text-2xl font-bold text-sky-300'>Education</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='mb-10 md:text-lg xl:text-xl'>
@@ -16,19 +16,19 @@ function Experience() {
           Niagara College - Computer Programming & Analysis <span className='font-light'>(2021-2024)</span>
         </p>
         <ul className="list-disc pl-5">
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Collaborated with peers to develop a business member meetings application
             featuring CRUD operations and authentication with C#, ASP.NET, SQLite, JavaScript, and Bootstrap
           </li>
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Developed functional server-side components using REST APIs using GET/POST/DELETE/PUT requests,
             including writting unit tests to ensure code integrity
           </li>
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Constructed applications in C# incorporating advanced concepts such as binary trees, linked lists,
             arrays, polymorphism, indexer, inheritance, and classes
           </li>
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Applied SQL expertise to handle SSIS, big data, retrieval, and database backup
             operations. Implemented optimization strategies, including the creation of stored procedures and the
             utilization of indexes. Successfully integrated various software like C#, PowerBI with SQL databases
@@ -47,17 +47,17 @@ function Experience() {
           Computer Programming Peer Tutor - Niagara College <span className='font-light'>(2022-2023)</span>
         </p>
         <ul className="list-disc pl-5">
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Guided fellow students in programming in understanding concepts,
             debugging code, and conducting thorough code testing in MVC, Javascript, SQL
           </li>
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Offered effective solutions to coding challenges
           </li>
-          <li className='mb-2'>
+          <li className='mb-2 v'>
             Managed multiple student projects, providing support in organizing and optimizing code
           </li>
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Created reports and provided solutions to aid students in their improvement with the
             peer tutor coordinator
           </li>
@@ -66,17 +66,17 @@ function Experience() {
           IT help desk - FPT <span className='font-light'>(2019-2020)</span>
         </p>
         <ul className="list-disc pl-5">
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Provided hands-on support at the IT Help Desk, troubleshooting networking issues,
             addressing hardware and general IT concerns
           </li>
 
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Wrote detailed customer report forms, documenting solutions,
             and ensuring effective communication of technical resolutions
           </li>
 
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Collaborated with IT team members to implement and maintain efficient help desk procedures,
             improvement of support services
           </li>
@@ -87,19 +87,19 @@ function Experience() {
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='mb-10 md:text-lg xl:text-xl'>
         <ul className="list-disc pl-5">
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Gonul Turkdogan - gturkdogan@niagaracollege.ca
             <a className='ml-2' href="mailto:gturkdogan@niagaracollege.ca?subject=&body=Dear%20Ms. Gonul Turkdogan:">
               <EmailIcon className='hover:opacity-60' />
             </a>
           </li>
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             David Stovell - dstovell@niagaracollege.ca
             <a className='ml-2' href="mailto:dstovell@niagaracollege.ca?subject=&body=Dear%20Mr. David Stovell:">
               <EmailIcon className='hover:opacity-60' />
             </a>
           </li>
-          <li className='mb-2'>
+          <li className='mb-2 text-gray-300'>
             Marsha Badeley - mbaddeley@niagaracollege.ca
             <a className='ml-2' href="mailto:mbaddeley@niagaracollege.ca?subject=&body=Dear%20Ms. Marsha Badeley:">
               <EmailIcon className='hover:opacity-60' />
