@@ -3,9 +3,11 @@ import React, { useRef, useEffect } from 'react';
 interface Props {
   toggleSort: boolean;
   handleToggleSort: (sort: boolean) => void;
+  handleSetSortTerm: (sortTerm: string, e: React.MouseEvent) => void;
+  sortTerm: string;
 }
 
-export default function DropDownList({ toggleSort, handleToggleSort }: Props) {
+export default function DropDownList({ toggleSort, handleToggleSort, handleSetSortTerm, sortTerm }: Props) {
   //Make sure to reference useRef type when comparing other elements in the html
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -28,25 +30,48 @@ export default function DropDownList({ toggleSort, handleToggleSort }: Props) {
   }, []);
 
   return (
-    <div ref={dropdownRef} className='relative w-60 bg-slate-700'>
+    <div ref={dropdownRef} className="relative w-40 before:content-['']
+      before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
+      before:backdrop-blur-lg before:bg-slate-600/50">
       <div
         onClick={() => handleToggleSort(!toggleSort)}
         className='flex justify-between items-center w-full text-gray-300 text-center font-bold 
-        text-lg p-3 px-4 hover:cursor-pointer space-x-4 hover:text-gray-300/75'
+        text-base p-3 px-4 hover:cursor-pointer space-x-4 hover:text-zinc-900 hover:bg-slate-300'
       >
         <p>Sort By</p>
         <span className={`filter-arrow-icon ${toggleSort ? 'expanded' : ''}`}>&#9650;</span>
       </div>
       <div
-        className={`${toggleSort ? '' : 'hidden'} text-center z-40 pb-2 absolute max-h-16 h-full w-full bg-slate-700`}
+        className={`${toggleSort ? '' : 'hidden'} text-center z-40 rounded-b absolute w-full before:content-['']
+        before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
+        before:backdrop-blur-lg before:bg-slate-600/50`}
       >
-        <div className='font-bold text-gray-300 p-4 text-lg hover:cursor-pointer hover:bg-slate-300 hover:text-zinc-900'>
+        <div onClick={(e) => handleSetSortTerm('All', e)}
+          className={`${sortTerm === 'All' ?
+            'text-zinc-900 bg-slate-300 hover:opacity-70' :
+            'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+          font-bold p-4 text-base hover:cursor-pointer`}>
+          All
+        </div>
+        <div onClick={(e) => handleSetSortTerm('Popular', e)}
+          className={`${sortTerm === 'Popular' ?
+            'text-zinc-900 bg-slate-300 hover:opacity-70' :
+            'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+        font-bold p-4 text-base hover:cursor-pointer`}>
           Popular
         </div>
-        <div className='font-bold text-gray-300 p-4 text-lg hover:cursor-pointer hover:bg-slate-300 hover:text-zinc-900'>
+        <div onClick={(e) => handleSetSortTerm('Latest', e)}
+          className={`${sortTerm === 'Latest' ?
+            'text-zinc-900 bg-slate-300 hover:opacity-70' :
+            'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+        font-bold p-4 text-base hover:cursor-pointer`}>
           Latest
         </div>
-        <div className='font-bold text-gray-300 p-4 text-lg hover:cursor-pointer hover:bg-slate-300 hover:text-zinc-900'>
+        <div onClick={(e) => handleSetSortTerm('Oldest', e)}
+          className={`${sortTerm === 'Oldest' ?
+            'text-zinc-900 bg-slate-300 hover:opacity-70' :
+            'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+        font-bold p-4 text-base hover:cursor-pointer`}>
           Oldest
         </div>
       </div>

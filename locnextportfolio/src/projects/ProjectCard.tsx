@@ -15,9 +15,7 @@ export default function ProjectCard({ project }: IProject) {
 
     useEffect(() => {
         const calculateSubstringLength = () => {
-            if (window.innerWidth >= 1200) {
-                return 38; // Use the full length for larger screens
-            } else if (window.innerWidth >= 768) {
+            if (window.innerWidth >= 768) {
                 return 28; // Use a shorter substring for medium-sized screens
             } else {
                 return 30; // Use an even shorter substring for smaller screens
@@ -40,16 +38,17 @@ export default function ProjectCard({ project }: IProject) {
     }, []);
 
     return (
-        <Link href={`/Work/${project.id}`} className='hover:cursor-pointer'>
-            <div className="hover:scale-110 transition-transform duration-300 ease-out relative before:content-['']
-             before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
-             before:backdrop-blur-xl before:bg-slate-600/40 p-4 before:rounded">
+        <Link onClick={() => {window.scrollTo({ top: 0, behavior: 'instant' })}} href={`/Work/${project.id}`} className='hover:cursor-pointer'>
+            <div className="hover:scale-110 transition-transform duration-300 ease-out relative
+             before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
+             before:backdrop-blur-lg before:bg-slate-600/50 p-4 pb-0 before:rounded">
                 <p className="pt-5 text-center font-bold text-xl text-gray-300">{project.name}</p>
-                <Image className="pt-5" src={project.pictureURL} alt={project.name}
-                    width={750} height={750} />
+                <Image className="pt-5 max-w-full md:h-64 lg:h-60 xl:h-52 md:object-contain" src={project.pictureURL} alt={project.name}
+                    width={750} height={750} priority />
                 <div className="pb-5 pt-5">
                     <p className="whitespace-pre-wrap text-lg text-gray-300">
-                        <span>{project.technologies.substring(0, substringLength)}...</span>
+                        <span>{project.technologies.substring(0, substringLength)}
+                            {project.technologies.length > substringLength ? '...' : ''}</span>
                     </p>
                     <p className='mt-5 text-gray-300'>Click to view</p>
                 </div>

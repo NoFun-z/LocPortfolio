@@ -68,8 +68,8 @@ export default function Home() {
           {techImages.map(ti => (
             <a key={ti.alt} href={ti.href} target="_blank" rel="noopener noreferrer" className='relative group'>
               <Image className='hover:cursor-pointer filter-none hover:grayscale transition-filter'
-                src={ti.src} alt={ti.alt} width={70} height={70}
-                priority />
+                src={ti.src} alt={ti.alt} width={60} height={60}
+                style={{ width: 'auto', height: 'auto' }} />
             </a>
           ))}
         </div>

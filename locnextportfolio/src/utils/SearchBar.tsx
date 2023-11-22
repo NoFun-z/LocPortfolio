@@ -42,7 +42,7 @@ export default function SearchBar({ searchTerm, setSearchTerm, handleSubmit }: P
             </IconButton>
             <input
                 className={`search-bar ${isFocused ? 'focused' : ''}`}
-                placeholder='Search...'
+                placeholder='Search by tools...'
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onFocus={() => setIsFocused(true)}

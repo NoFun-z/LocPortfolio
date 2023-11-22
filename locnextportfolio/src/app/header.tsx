@@ -34,7 +34,7 @@ export default function Header(props: any) {
         return (
             <Link onClick={() => {
                 isMobile && ToggleMenuHandler();
-                window.scrollTo(0, 0);
+                window.scrollTo({ top: 0, behavior: 'instant' });
             }} href={href} passHref className={`${isActive ? 'hover:opacity-80' : ''}
              hover:bg-slate-300 hover:rounded-sm hover:py-6 md:hover:py-2 hover:text-zinc-900 
              ${addStyle} ${isActive ? 'text-zinc-900 rounded-sm bg-slate-300 font-bold py-6 md:py-2' : ''}`}>
@@ -125,7 +125,7 @@ export default function Header(props: any) {
                         width={160}
                         height={160}
                         className='cursor-pointer'
-                        style={{width: 'auto', height: 'auto'}}
+                        style={{ width: 'auto', height: 'auto' }}
                         priority
                     />
                 </Link>
@@ -159,7 +159,7 @@ export default function Header(props: any) {
             <section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-navbar' : 'hidden'} 
                 flex-col fixed z-40 top-1/2 transform -translate-y-1/2 left-5 w-18 h-30 gap-7 
                 before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full
-                before:rounded-full md:before:backdrop-blur-xl md:before:bg-slate-600/40 p-3 py-8 justify-center 
+                before:rounded-full md:before:backdrop-blur-lg md:before:bg-slate-600/50 p-3 py-8 justify-center 
                 text-center`}>
                 <VerticalActiveLink href="/" addStyle="p-2" isMobile={false}>
                     <AccountCircleIcon className='text-3xl' />
@@ -174,7 +174,7 @@ export default function Header(props: any) {
             {pathName !== "/" ? (<section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-contact' : 'hidden'} 
                 flex-col fixed z-40 top-1/2 transform -translate-y-1/2 right-5 w-18 h-30 gap-7 
                 before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full
-                before:rounded-full md:before:backdrop-blur-xl md:before:bg-slate-600/40 p-3 py-8 justify-center 
+                before:rounded-full md:before:backdrop-blur-lg md:before:bg-slate-600/50 p-3 py-8 justify-center 
                 text-center`}>
                 <a href='https://github.com/NoFun-z' target="_blank" rel="noopener noreferrer">
                     <GitHubIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
@@ -191,9 +191,9 @@ export default function Header(props: any) {
             </section>) : ''}
             <section className={`${scrollY > 300 ? 'flex animate-open-back-to-top' : 'hidden'}
                 fixed z-40 bottom-10 w-18 h-18 before:content-[''] before:absolute before:-z-10 before:left-0 
-                before:top-1 before:w-full before:h-full before:rounded-full before:backdrop-blur-xl 
-                before:bg-slate-600/40 p-4 justify-center text-center hover:cursor-pointer hover:text-zinc-900
-                hover:before:bg-slate-400`} onClick={() => { window.scrollTo(0, 0) }}>
+                before:top-1 before:w-full before:h-full before:rounded-full before:backdrop-blur-lg 
+                before:bg-slate-600/50 p-4 justify-center text-center hover:cursor-pointer hover:text-zinc-900
+                hover:before:bg-slate-300`} onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                 <NavigationIcon className='text-3xl' />
             </section>
             {/* nav menu for mobile view */}
