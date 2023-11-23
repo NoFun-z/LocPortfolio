@@ -9,10 +9,10 @@ function Experience() {
 
   return (
     <div className="pt-8 md:pt-14 flex flex-col">
-      <p className='mb-10 text-lg md:text-2xl font-bold text-sky-300'>Education</p>
+      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{color: '#838fc9'}}>Education</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <div className='mb-10 md:text-lg xl:text-xl'>
-        <p className='mb-3 font-bold text-sky-300'>
+      <div className='font-mono mb-10 md:text-lg xl:text-xl'>
+        <p className='mb-3 font-bold' style={{color: '#838fc9'}}>
           Niagara College - Computer Programming & Analysis <span className='font-light'>(2021-2024)</span>
         </p>
         <ul className="list-disc pl-5">
@@ -40,10 +40,10 @@ function Experience() {
         </ul>
       </div>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <p className='mb-10 text-lg md:text-2xl font-bold text-sky-300'>Job Experience</p>
+      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{color: '#838fc9'}}>Job Experience</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <div className='mb-10 md:text-lg xl:text-xl'>
-        <p className='mb-3 font-bold text-sky-300'>
+      <div className='font-mono mb-10 md:text-lg xl:text-xl'>
+        <p className='mb-3 font-bold' style={{color: '#838fc9'}}>
           Computer Programming Peer Tutor - Niagara College <span className='font-light'>(2022-2023)</span>
         </p>
         <ul className="list-disc pl-5">
@@ -62,7 +62,7 @@ function Experience() {
             peer tutor coordinator
           </li>
         </ul>
-        <p className='pt-3 mb-3 font-bold text-sky-300'>
+        <p className='pt-3 mb-3 font-bold' style={{color: '#838fc9'}}>
           IT help desk - FPT <span className='font-light'>(2019-2020)</span>
         </p>
         <ul className="list-disc pl-5">
@@ -83,9 +83,9 @@ function Experience() {
         </ul>
       </div>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <p className='mb-10 text-lg md:text-2xl font-bold text-sky-300'>References</p>
+      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{color: '#838fc9'}}>References</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <div className='mb-10 md:text-lg xl:text-xl'>
+      <div className='font-mono mb-10 md:text-lg xl:text-xl whitespace-pre-wrap'>
         <ul className="list-disc pl-5">
           <li className='mb-2 text-gray-300'>
             Gonul Turkdogan - gturkdogan@niagaracollege.ca
@@ -108,20 +108,22 @@ function Experience() {
         </ul>
       </div>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <p className='pt-20 mb-10 text-center text-lg md:text-2xl font-bold text-sky-300'>Services I offer</p>
-      <div className='mb-32 pt-12 text-lg md:text-xl flex flex-wrap items-center justify-center gap-10'>
+      <p className='font-mono pt-20 mb-10 text-center text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>
+        Services I offer
+      </p>
+      <div className='font-mono mb-32 pt-12 text-lg md:text-xl flex flex-wrap items-center justify-center gap-10'>
         {serviceImages.map(si => (
           <a key={si.title} href={si.href} target="_blank" rel="noopener noreferrer" className='relative group'>
             <div className="image-container">
               <Image
                 className='hover:cursor-pointer transition-transform duration-300 ease-out transform
-             hover:scale-110 rounded p-4 bg-slate-800 bg-cover'
+             hover:scale-110 rounded p-4 bg-cover'
                 src={si.src}
                 alt={si.alt}
                 width={250}
                 height={250}
               />
-              <div className="text-center mt-5">{si.title}</div>
+              <div className="text-gray-300 text-center mt-5">{si.title}</div>
             </div>
           </a>
         ))}

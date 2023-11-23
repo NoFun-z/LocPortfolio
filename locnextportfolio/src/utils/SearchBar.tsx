@@ -18,11 +18,14 @@ export default function SearchBar({ searchTerm, setSearchTerm, handleSubmit }: P
             sx={{
                 borderRadius: 20,
                 background: 'transparent',
-                border: `2px solid ${isFocused? '#838fc9' : '#70819e'}`,
+                border: `3px solid ${isFocused ? '#838fc9' : '#70819e'}`,
                 boxShadow: 'none',
                 position: 'relative',
-                transform: 'translateY(-2px)'
+                transform: 'translateY(-2px)',
             }}
+            className="font-mono before:rounded-full before:content-['']
+            before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
+            md:before:backdrop-blur-sm before:bg-slate-600/30 lg:before:bg-slate-800/20"
         >
             <IconButton
                 type='button'

@@ -16,15 +16,18 @@ export default function Carousel({ children: slides }: any) {
     };
 
     return (
-        <div className="overflow-hidden relative ">
+        <div className="overflow-hidden relative">
             <div className="flex transition-transform duration-300 ease-out"
                 style={{ transform: `translateX(-${current * 100}%)` }}>
                 {slides}
             </div>
-            <div className="absolute inset-0 flex items-center justify-between">
+            <div className="absolute inset-0 bottom-40 flex items-center justify-between">
                 <button
                     onClick={prev}
-                    className="p-3 py-2 rounded-full bg-slate-300 text-zinc-900 hover:bg-slate-600"
+                    className="p-3 py-2 translate-y-20 text-zinc-900 before:content-['']
+                    before:absolute before:rounded-full before:-z-10 before:left-0 before:top-0 before:w-full
+                     before:h-full before:backdrop-blur-sm before:bg-slate-300/40
+                    hover:before:bg-slate-600"
                     aria-label="Previous Slide"
                 >
                     <FontAwesomeIcon icon={faLeftLong} className='text-lg' />
@@ -32,7 +35,10 @@ export default function Carousel({ children: slides }: any) {
 
                 <button
                     onClick={next}
-                    className="p-3 py-2 rounded-full bg-slate-300 text-zinc-900 hover:bg-slate-600"
+                    className="p-3 py-2 translate-y-20 text-zinc-900 before:content-['']
+                    before:absolute before:rounded-full before:-z-10 before:left-0 before:top-0 before:w-full
+                     before:h-full before:backdrop-blur-sm before:bg-slate-300/40
+                    hover:before:bg-slate-600"
                     aria-label="Next Slide"
                 >
                     <FontAwesomeIcon icon={faRightLong} className='text-lg' />

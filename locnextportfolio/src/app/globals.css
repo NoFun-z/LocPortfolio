@@ -39,7 +39,7 @@ body {
 }
 
 .search-bar.focused::placeholder {
-  color: #393e5b;
+  color: #484d69;
 }
 
 .filter-arrow-icon {
@@ -52,6 +52,14 @@ body {
 
 .MuiTableRow-root {
   border-bottom: 2px solid #838fc9;
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none;
+}
+
+video::-webkit-media-controls-mute-button {
+  display: none;
 }
 
 body::-webkit-scrollbar {
@@ -67,11 +75,6 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   background-color: rgba(54, 60, 70, 0.8);
-}
-
-video::-webkit-media-controls-mute-button,
-video::-moz-mute-unmute-button {
-   display: none;
 }
 
 @layer utilities {

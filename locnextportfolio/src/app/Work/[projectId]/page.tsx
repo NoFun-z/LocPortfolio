@@ -13,7 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function ProjectDetails() {
   const { projects } = useProjects();
   const { projectId } = useParams();
-  const [projectData, setProjectData] = useState<Project | undefined>();
+  const [projectData, setProjectData] = useState<Project | undefined>(undefined);
 
   //Retrieve project data
   useEffect(() => {
@@ -23,7 +23,11 @@ export default function ProjectDetails() {
   }, [])
 
   if (!projectData) {
-    return <div>NO DATA</div>
+    return (
+      <div className='font-mono font-bold'>
+        NO PROJECTS FOUND
+      </div>
+    )
   }
 
   return (
@@ -33,8 +37,7 @@ export default function ProjectDetails() {
           <div className='flex flex-col gap-10 justify-center'>
             {projectData.videoSrc ?
               (<Carousel>
-                {/* <video controls="" src={projectData.videoSrc} muted/> */}
-                <img src={projectData.pictureURL} alt={projectData.name} className='rounded' />
+                <video autoPlay controls src={projectData.videoSrc} muted />
                 <img src={projectData.pictureURL} alt={projectData.name} className='rounded' />
               </Carousel>)
               :
@@ -55,26 +58,34 @@ export default function ProjectDetails() {
           </div>
         </Grid>
         <Grid item xs={12}>
-          <div className='text-2xl lg:text-4xl font-bold'>{projectData.name}</div>
+          <div className='font-mono text-2xl lg:text-4xl font-bold' style={{ color: '#838fc9' }}>{projectData.name}</div>
           <hr className="mb-12 mt-2 h-2 w-full" style={{ backgroundColor: '#838fc9' }} />
           <TableContainer>
             <Table>
               <TableBody>
                 <TableRow>
-                  <TableCell className='text-gray-300 text-base lg:text-lg font-bold lg:w-44'>Technologies</TableCell>
-                  <TableCell className='text-gray-300 text-base lg:text-lg'>{projectData.technologies}</TableCell>
+                  <TableCell className='font-mono text-gray-300 text-base lg:text-lg font-bold lg:w-44'
+                    style={{ color: '#838fc9' }}>Technologies</TableCell>
+                  <TableCell className='font-mono text-gray-300 text-base lg:text-lg'>
+                    {projectData.technologies}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className='text-gray-300 text-base lg:text-lg font-bold'>Description</TableCell>
-                  <TableCell className='text-gray-300 text-base lg:text-lg'>{projectData.description}</TableCell>
+                  <TableCell className='font-mono text-gray-300 text-base lg:text-lg font-bold'
+                    style={{ color: '#838fc9' }}>Description</TableCell>
+                  <TableCell className='font-mono text-gray-300 text-base lg:text-lg'>{projectData.description}
+                  </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className='text-gray-300 text-base lg:text-lg font-bold'>Main Tools</TableCell>
-                  <TableCell className='text-gray-300 text-base lg:text-lg'>{projectData.mainTools}</TableCell>
+                  <TableCell className='font-mono text-gray-300 text-base lg:text-lg font-bold'
+                    style={{ color: '#838fc9' }}>Main Tools</TableCell>
+                  <TableCell className='font-mono text-gray-300 text-base lg:text-lg'>{projectData.mainTools}
+                  </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className='text-gray-300 text-base lg:text-lg font-bold'>Published Date</TableCell>
-                  <TableCell className='text-gray-300 text-base lg:text-lg'>{projectData.publishedDate}</TableCell>
+                  <TableCell className='font-mono text-gray-300 text-base lg:text-lg font-bold'
+                    style={{ color: '#838fc9' }}>Published Date</TableCell>
+                  <TableCell className='font-mono text-gray-300 text-base lg:text-lg'>{projectData.publishedDate}
+                  </TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -85,68 +96,4 @@ export default function ProjectDetails() {
   )
 }
 
-// export async function getStaticPaths() {
-//   const client = await MongoClient.connect(
-//     ''
-//   );
-
-//   const db = client.db();
-//   const projectsCollection = db.collection('projects');
-
-//   const projects = await projectsCollection.find({}, { projection: { _id: 1 } }).toArray();
-
-//   client.close();
-
-//   return {
-//     fallback: false,
-//     paths: projects.map(p => ({
-//       params: { projectId: p._id?.toString() },
-//     })),
-//   }
-// }
-
-// export async function getServerProps(context: any) {
-//   const projectId = context.params.projectId;
-
-//   const client = await MongoClient.connect(
-//     ''
-//   );
-
-//   try {
-//     const db = client.db();
-//     const projectsCollection = db.collection('projects');
-//     console.log("Why!");
-//     const selectedProject = await projectsCollection.findOne({ _id: new ObjectId(projectId) });
-
-//     if (selectedProject) {
-//       console.log("Good");
-//     } else {
-//       console.log("Bad: No project found");
-//     }
-
-//     return {
-//       props: {
-//         projectData: {
-//           id: selectedProject?._id.toString(),
-//           name: selectedProject?.name,
-//           technologies: selectedProject?.technologies,
-//           description: selectedProject?.description,
-//           publishedDate: selectedProject?.publishedDate,
-//           pictureURL: selectedProject?.pictureURL,
-//           publishedLink: selectedProject?.publishedLink,
-//           githubLink: selectedProject?.githubLink,
-//           favourite: selectedProject?.favourite,
-//           videoSrc: selectedProject?.videoSrc,
-//         },
-//       },
-//     };
-//   } catch (error) {
-//     console.error("Error:", error);
-//     return {
-//       notFound: true,
-//     };
-//   } finally {
-//     client.close();
-//   }
-// }
 

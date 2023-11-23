@@ -30,9 +30,9 @@ export default function DropDownList({ toggleSort, handleToggleSort, handleSetSo
   }, []);
 
   return (
-    <div ref={dropdownRef} className="relative w-40 before:content-['']
-      before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
-      before:backdrop-blur-lg before:bg-slate-600/50">
+    <div ref={dropdownRef} className="font-mono z-20 relative w-40 before:content-['']
+      before:absolute before:-z-10 before:left-0 before:w-full before:h-full before:backdrop-blur-lg
+      md:before:backdrop-blur-md before:bg-slate-600/30 lg:before:bg-slate-800/40">
       <div
         onClick={() => handleToggleSort(!toggleSort)}
         className='flex justify-between items-center w-full text-gray-300 text-center font-bold 
@@ -42,9 +42,9 @@ export default function DropDownList({ toggleSort, handleToggleSort, handleSetSo
         <span className={`filter-arrow-icon ${toggleSort ? 'expanded' : ''}`}>&#9650;</span>
       </div>
       <div
-        className={`${toggleSort ? '' : 'hidden'} text-center z-40 rounded-b absolute w-full before:content-['']
-        before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
-        before:backdrop-blur-lg before:bg-slate-600/50`}
+        className={`${toggleSort ? '' : 'hidden'} text-center rounded-b absolute w-full before:content-['']
+        before:absolute before:-z-10 before:left-0 before:w-full before:h-full before:backdrop-blur-lg
+        md:before:backdrop-blur-md before:bg-slate-600/30 lg:before:bg-slate-800/40`}
       >
         <div onClick={(e) => handleSetSortTerm('All', e)}
           className={`${sortTerm === 'All' ?

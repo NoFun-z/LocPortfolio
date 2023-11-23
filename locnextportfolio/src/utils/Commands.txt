@@ -1,2 +1,0 @@
-MongoDB-Cluster-Connection-String = 
-mongodb+srv://hoangloc1511:Xixc3SnK8pzHH0mE@cluster0.2jdqnje.mongodb.net/?retryWrites=true&w=majority

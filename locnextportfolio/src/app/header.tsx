@@ -13,6 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import VideoBackground from './videoBackground';
 
 interface ActiveLinkProps {
     href: string,
@@ -36,8 +37,10 @@ export default function Header(props: any) {
                 isMobile && ToggleMenuHandler();
                 window.scrollTo({ top: 0, behavior: 'instant' });
             }} href={href} passHref className={`${isActive ? 'hover:opacity-80' : ''}
-             hover:bg-slate-300 hover:rounded-sm hover:py-6 md:hover:py-2 hover:text-zinc-900 
-             ${addStyle} ${isActive ? 'text-zinc-900 rounded-sm bg-slate-300 font-bold py-6 md:py-2' : ''}`}>
+             hover:bg-slate-300 hover:rounded-sm hover:py-6 md:hover:py-2 hover:text-zinc-900 text-gray-300
+             ${addStyle} ${isActive ? 'text-zinc-900 rounded-sm bg-slate-300 py-6 md:py-2' : ''}`}
+                style={{ fontFamily: 'monospace', fontWeight: isActive ? '900' : 'normal' }}
+            >
                 {children}
             </Link>
         );
@@ -52,7 +55,7 @@ export default function Header(props: any) {
                 window.scrollTo(0, 0);
             }} href={href} passHref className={`${isActive ?
                 'hover:opacity-80 text-zinc-800 rounded-full bg-slate-300' : ''}
-             hover:bg-slate-300 rounded-full hover:text-zinc-800 
+             hover:bg-slate-300 rounded-full hover:text-zinc-800 text-gray-300
              ${addStyle}`}>
                 {children}
             </Link>
@@ -114,16 +117,19 @@ export default function Header(props: any) {
     }, [menuState]);
 
     return (
-        <body className=" overflow-x-hidden bg-gradient-to-br from-zinc-900 to-slate-800
-             text-gray-300">
+        <body className="overflow-x-hidden bg-gradient-to-br from-zinc-900 to-slate-800
+         lg:from-indigo-950 lg:via-zinc-800 lg:to-slate-800
+            ">
+            {/* video background */}
+            <VideoBackground />
             {/* nav bar */}
             <section className={navbarClasses}>
                 <Link href="/">
                     <Image
                         src='/Images/Loc-Logo.png'
                         alt='logo'
-                        width={160}
-                        height={160}
+                        width={70}
+                        height={70}
                         className='cursor-pointer'
                         style={{ width: 'auto', height: 'auto' }}
                         priority
@@ -134,11 +140,11 @@ export default function Header(props: any) {
                     <button id='burgerbtn' onClick={ToggleMenuHandler} className={`relative h-8 w-8 
                         cursor-pointer text-3xl md:hidden ${menuState.isOpen ? 'toggle-btn' : ''}`}>
                         <div
-                            className="absolute top-4 -mt-0.5 h-1 w-6 rounded bg-white transition-all
+                            className="absolute top-4 -mt-0.5 h-1 w-6 rounded bg-gray-300 transition-all
                                  duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 
-                                 before:-translate-y-3 before:rounded before:bg-white before:transition-all
+                                 before:-translate-y-3 before:rounded before:bg-gray-300 before:transition-all
                                  before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 
-                                 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white 
+                                 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-gray-300 
                                  after:transition-all after:duration-500 after:content-['']">
                         </div>
                     </button>
@@ -159,7 +165,7 @@ export default function Header(props: any) {
             <section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-navbar' : 'hidden'} 
                 flex-col fixed z-40 top-1/2 transform -translate-y-1/2 left-5 w-18 h-30 gap-7 
                 before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full
-                before:rounded-full md:before:backdrop-blur-lg md:before:bg-slate-600/50 p-3 py-8 justify-center 
+                before:rounded-full md:before:backdrop-blur-sm md:before:bg-slate-600/30 lg:before:bg-slate-800/40 p-3 py-8 justify-center 
                 text-center`}>
                 <VerticalActiveLink href="/" addStyle="p-2" isMobile={false}>
                     <AccountCircleIcon className='text-3xl' />
@@ -174,7 +180,8 @@ export default function Header(props: any) {
             {pathName !== "/" ? (<section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-contact' : 'hidden'} 
                 flex-col fixed z-40 top-1/2 transform -translate-y-1/2 right-5 w-18 h-30 gap-7 
                 before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full
-                before:rounded-full md:before:backdrop-blur-lg md:before:bg-slate-600/50 p-3 py-8 justify-center 
+                before:rounded-full md:before:backdrop-blur-sm md:before:bg-slate-600/30
+                 lg:before:bg-slate-800/40 p-3 py-8 justify-center text-gray-300
                 text-center`}>
                 <a href='https://github.com/NoFun-z' target="_blank" rel="noopener noreferrer">
                     <GitHubIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
@@ -189,17 +196,20 @@ export default function Header(props: any) {
                     <FacebookIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
                 </a>
             </section>) : ''}
-            <section className={`${scrollY > 300 ? 'flex animate-open-back-to-top' : 'hidden'}
-                fixed z-40 bottom-10 w-18 h-18 before:content-[''] before:absolute before:-z-10 before:left-0 
-                before:top-1 before:w-full before:h-full before:rounded-full before:backdrop-blur-lg 
-                before:bg-slate-600/50 p-4 justify-center text-center hover:cursor-pointer hover:text-zinc-900
-                hover:before:bg-slate-300`} onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+            <section className={`${scrollY > 300 && !menuState.isOpen ? 'flex animate-open-back-to-top' :
+                `hidden md:${scrollY > 300 ? 'flex' : 'hidden'} md:${scrollY > 300 ? 'animate-open-back-to-top' : ''}`}
+                fixed z-40 bottom-10 w-18 h-18 before:content-[''] before:absolute before:-z-10 before:left-0 before:backdrop-blur-lg
+                before:top-1 before:w-full before:h-full before:rounded-full md:before:backdrop-blur-sm
+                 before:bg-slate-600/30 lg:before:bg-slate-800/40 p-4 justify-center text-center 
+                 hover:cursor-pointer hover:text-zinc-900
+                hover:before:bg-slate-300 text-gray-300`} onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                 <NavigationIcon className='text-3xl' />
             </section>
             {/* nav menu for mobile view */}
-            <section id='mobile-menu' className={`fixed z-30 pt-[124.78px] justify-center ${menuState.isOpen
+            <section id='mobile-menu' className={`font-mono fixed z-30 pt-[124.78px] justify-center ${menuState.isOpen
                 ? 'flex animate-open-menu' : menuState.isClosing ? 'flex animate-close-menu' : 'hidden'}
-                     md:hidden w-full origin-top flex-col bg-slate-800 text-4xl px-0`}>
+                     md:hidden w-full origin-top flex-col bg-slate-800 text-4xl px-0`}
+                style={{ fontFamily: 'monospace' }}>
                 <nav className="flex flex-col space-y-2 items-center py-8" aria-label="mobile">
                     <ActiveLink href="/" addStyle="w-full py-6 text-center" isMobile={true}>
                         Bio
@@ -214,8 +224,8 @@ export default function Header(props: any) {
             </section>
             {/* Overlay div */}
             <div id='overlay-div'
-                className={`fixed min-h-screen z-20 translate-y-40 inset-0 origin-bottom bg-black
-                    opacity-50 ${menuState.isOpen ? 'flex animate-open-menu-layout' : menuState.isClosing ?
+                className={`fixed min-h-screen z-20 translate-y-40 inset-0 origin-bottom bg-zinc-900
+                    opacity-90 ${menuState.isOpen ? 'flex animate-open-menu-layout' : menuState.isClosing ?
                         'flex animate-close-menu-layout' : 'hidden'} md:hidden`}
                 onClick={ToggleMenuHandler} // Close the mobile menu when clicking on the overlay
             ></div>
