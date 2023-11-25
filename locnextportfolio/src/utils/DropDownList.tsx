@@ -1,15 +1,20 @@
+'use client'
+
 import React, { useRef, useEffect } from 'react';
+import { useAppDispatch, type RootState } from '../app/GlobalRedux/store';
+import { useSelector } from 'react-redux';
+import { setSortState } from '../app/GlobalRedux/Features/fillter/fiterSlice'
 
 interface Props {
   toggleSort: boolean;
   handleToggleSort: (sort: boolean) => void;
-  handleSetSortTerm: (sortTerm: string, e: React.MouseEvent) => void;
-  sortTerm: string;
 }
 
-export default function DropDownList({ toggleSort, handleToggleSort, handleSetSortTerm, sortTerm }: Props) {
+export default function DropDownList({ toggleSort, handleToggleSort }: Props) {
   //Make sure to reference useRef type when comparing other elements in the html
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const dispatch = useAppDispatch();
+  const sortTerm = useSelector((state: RootState) => state.counter.sortTerm);
 
   const handleClickOutside = (event: any) => {
     //Only set the toggle to false when the ddl is clicked first
@@ -46,28 +51,28 @@ export default function DropDownList({ toggleSort, handleToggleSort, handleSetSo
         before:absolute before:-z-10 before:left-0 before:w-full before:h-full before:backdrop-blur-lg
         md:before:backdrop-blur-md before:bg-slate-600/30 lg:before:bg-slate-800/40`}
       >
-        <div onClick={(e) => handleSetSortTerm('All', e)}
+        <div onClick={() => dispatch(setSortState('All'))}
           className={`${sortTerm === 'All' ?
             'text-zinc-900 bg-slate-300 hover:opacity-70' :
             'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
           font-bold p-4 text-base hover:cursor-pointer`}>
           All
         </div>
-        <div onClick={(e) => handleSetSortTerm('Popular', e)}
+        <div onClick={() => dispatch(setSortState('Popular'))}
           className={`${sortTerm === 'Popular' ?
             'text-zinc-900 bg-slate-300 hover:opacity-70' :
             'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
         font-bold p-4 text-base hover:cursor-pointer`}>
           Popular
         </div>
-        <div onClick={(e) => handleSetSortTerm('Latest', e)}
+        <div onClick={() => dispatch(setSortState('Latest'))}
           className={`${sortTerm === 'Latest' ?
             'text-zinc-900 bg-slate-300 hover:opacity-70' :
             'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
         font-bold p-4 text-base hover:cursor-pointer`}>
           Latest
         </div>
-        <div onClick={(e) => handleSetSortTerm('Oldest', e)}
+        <div onClick={() => dispatch(setSortState('Oldest'))}
           className={`${sortTerm === 'Oldest' ?
             'text-zinc-900 bg-slate-300 hover:opacity-70' :
             'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}

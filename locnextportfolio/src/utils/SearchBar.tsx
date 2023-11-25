@@ -1,15 +1,20 @@
+'use client'
+
 import { Paper, IconButton } from '@mui/material';
 import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
+import { useAppDispatch, type RootState } from '../app/GlobalRedux/store';
+import { useSelector } from 'react-redux';
+import { setFilterState } from '../app/GlobalRedux/Features/fillter/fiterSlice'
 
 interface Props {
-    searchTerm: string,
-    setSearchTerm: (searchterm: string) => void,
     handleSubmit: (e: any) => void
 }
 
-export default function SearchBar({ searchTerm, setSearchTerm, handleSubmit }: Props) {
+export default function SearchBar({ handleSubmit }: Props) {
     const [isFocused, setIsFocused] = useState(false);
+    const dispatch = useAppDispatch()
+    const searchTerm = useSelector((state: RootState) => state.counter.searchTerm);
 
     return (
         <Paper
@@ -47,7 +52,7 @@ export default function SearchBar({ searchTerm, setSearchTerm, handleSubmit }: P
                 className={`search-bar ${isFocused ? 'focused' : ''}`}
                 placeholder='Search by tools...'
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => dispatch(setFilterState(e.target.value))}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 style={{

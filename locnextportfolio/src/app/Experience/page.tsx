@@ -3,16 +3,15 @@ import Image from 'next/image'
 import EmailIcon from '@mui/icons-material/Email';
 import useImages from '@/hooks/useImages';
 
-
 function Experience() {
   const { serviceImages } = useImages();
 
   return (
     <div className="pt-8 md:pt-14 flex flex-col">
-      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{color: '#838fc9'}}>Education</p>
+      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>Education</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='font-mono mb-10 md:text-lg xl:text-xl'>
-        <p className='mb-3 font-bold' style={{color: '#838fc9'}}>
+        <p className='mb-3 font-bold' style={{ color: '#838fc9' }}>
           Niagara College - Computer Programming & Analysis <span className='font-light'>(2021-2024)</span>
         </p>
         <ul className="list-disc pl-5">
@@ -33,17 +32,17 @@ function Experience() {
             operations. Implemented optimization strategies, including the creation of stored procedures and the
             utilization of indexes. Successfully integrated various software like C#, PowerBI with SQL databases
           </li>
-          <li>
+          <li className='text-gray-300'>
             Demonstrated a keen understanding of the IT business industry, network communication, and
             cybersecurity measures to avoid malware
           </li>
         </ul>
       </div>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{color: '#838fc9'}}>Job Experience</p>
+      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>Job Experience</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='font-mono mb-10 md:text-lg xl:text-xl'>
-        <p className='mb-3 font-bold' style={{color: '#838fc9'}}>
+        <p className='mb-3 font-bold' style={{ color: '#838fc9' }}>
           Computer Programming Peer Tutor - Niagara College <span className='font-light'>(2022-2023)</span>
         </p>
         <ul className="list-disc pl-5">
@@ -54,7 +53,7 @@ function Experience() {
           <li className='mb-2 text-gray-300'>
             Offered effective solutions to coding challenges
           </li>
-          <li className='mb-2 v'>
+          <li className='mb-2 text-gray-300'>
             Managed multiple student projects, providing support in organizing and optimizing code
           </li>
           <li className='mb-2 text-gray-300'>
@@ -62,7 +61,7 @@ function Experience() {
             peer tutor coordinator
           </li>
         </ul>
-        <p className='pt-3 mb-3 font-bold' style={{color: '#838fc9'}}>
+        <p className='pt-3 mb-3 font-bold' style={{ color: '#838fc9' }}>
           IT help desk - FPT <span className='font-light'>(2019-2020)</span>
         </p>
         <ul className="list-disc pl-5">
@@ -83,7 +82,7 @@ function Experience() {
         </ul>
       </div>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{color: '#838fc9'}}>References</p>
+      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>References</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='font-mono mb-10 md:text-lg xl:text-xl whitespace-pre-wrap'>
         <ul className="list-disc pl-5">
