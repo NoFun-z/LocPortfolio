@@ -13,7 +13,7 @@ const initialState: CounterState = {
 }
 
 export const filterSlice = createSlice({
-    name: 'filterCounter',
+    name: 'counter',
     initialState,
     reducers: {
         setFilterState: (state, action) => {

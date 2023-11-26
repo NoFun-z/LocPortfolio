@@ -1,18 +1,15 @@
 'use client'
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useAppDispatch, type RootState } from '../app/GlobalRedux/store';
 import { useSelector } from 'react-redux';
 import { setSortState } from '../app/GlobalRedux/Features/fillter/fiterSlice'
 
-interface Props {
-  toggleSort: boolean;
-  handleToggleSort: (sort: boolean) => void;
-}
 
-export default function DropDownList({ toggleSort, handleToggleSort }: Props) {
+export default function DropDownList() {
   //Make sure to reference useRef type when comparing other elements in the html
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [toggleSort, setToggleSort] = useState<boolean>(false);
   const dispatch = useAppDispatch();
   const sortTerm = useSelector((state: RootState) => state.counter.sortTerm);
 
@@ -20,7 +17,7 @@ export default function DropDownList({ toggleSort, handleToggleSort }: Props) {
     //Only set the toggle to false when the ddl is clicked first
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       // Click occurred outside the dropdown, close it
-      handleToggleSort(false);
+      setToggleSort(false);
     }
   };
 
@@ -39,7 +36,7 @@ export default function DropDownList({ toggleSort, handleToggleSort }: Props) {
       before:absolute before:-z-10 before:left-0 before:w-full before:h-full before:backdrop-blur-lg
       md:before:backdrop-blur-md before:bg-slate-600/30 lg:before:bg-slate-800/40">
       <div
-        onClick={() => handleToggleSort(!toggleSort)}
+        onClick={() => setToggleSort(!toggleSort)}
         className='flex justify-between items-center w-full text-gray-300 text-center font-bold 
         text-base p-3 px-4 hover:cursor-pointer space-x-4 hover:text-zinc-900 hover:bg-slate-300'
       >

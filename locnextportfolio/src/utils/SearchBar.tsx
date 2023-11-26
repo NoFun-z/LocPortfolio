@@ -1,20 +1,92 @@
 'use client'
 
 import { Paper, IconButton } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { useAppDispatch, type RootState } from '../app/GlobalRedux/store';
 import { useSelector } from 'react-redux';
 import { setFilterState } from '../app/GlobalRedux/Features/fillter/fiterSlice'
+import { setProjectsState } from '../app/GlobalRedux/Features/projects/projectSlice'
+import useProjects from '@/hooks/useProjects';
 
 interface Props {
-    handleSubmit: (e: any) => void
+    setIsLoading: (loading: boolean) => void;
 }
 
-export default function SearchBar({ handleSubmit }: Props) {
+export default function SearchBar({ setIsLoading }: Props) {
     const [isFocused, setIsFocused] = useState(false);
     const dispatch = useAppDispatch()
     const searchTerm = useSelector((state: RootState) => state.counter.searchTerm);
+    const sortTerm = useSelector((state: RootState) => state.counter.sortTerm);
+    const { projects } = useProjects();
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsLoading(true);
+
+        if (!searchTerm && sortTerm === 'All') {
+            dispatch(setProjectsState(projects));
+        } else {
+            let filteredProjects = [...projects];
+
+            // Filter by search term
+            if (searchTerm) {
+                const searchTermUpper = searchTerm.toUpperCase();
+                filteredProjects = filteredProjects.filter((p) =>
+                    p.technologies.split(',').some((tech) => tech.toUpperCase().includes(searchTermUpper))
+                );
+            }
+
+            // Sort by sort term
+            if (sortTerm === 'Popular') {
+                // Implement logic for sorting by popularity
+                filteredProjects = filteredProjects.filter(fp => fp.favourite);
+            } else if (sortTerm === 'Latest') {
+                // Implement logic for sorting by the latest date
+                filteredProjects.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
+            } else if (sortTerm === 'Oldest') {
+                // Implement logic for sorting by the oldest date
+                filteredProjects.sort((a, b) => new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime());
+            }
+
+            dispatch(setProjectsState(filteredProjects));
+
+            // Set isLoading to false after a delay
+            const timeoutId = setTimeout(() => {
+                setIsLoading(false);
+            }, 500);
+
+            // Clear the timeout on component unmount or if sortTerm changes
+            return () => {
+                clearTimeout(timeoutId);
+            };
+        }
+    };
+
+    useEffect(() => {
+        const syntheticEvent = { preventDefault: () => { } };
+        setIsLoading(true);
+
+        const fetchData = async () => {
+            await handleSubmit(syntheticEvent as React.FormEvent);
+
+            // Set a timeout to ensure that isLoading is set to false after 0.5 seconds
+            const timeoutId = setTimeout(() => {
+                setIsLoading(false);
+            }, 500);
+
+            // Cleanup function
+            return () => {
+                // If the component is unmounted before the timeout completes,
+                // make sure to clear the timeout and set the loading state to false.
+                clearTimeout(timeoutId);
+                setIsLoading(false);
+            };
+        };
+
+        fetchData();
+    }, [sortTerm]);
+
 
     return (
         <Paper

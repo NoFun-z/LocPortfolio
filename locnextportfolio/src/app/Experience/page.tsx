@@ -2,8 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 import EmailIcon from '@mui/icons-material/Email';
 import useImages from '@/hooks/useImages';
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'My NextJS Portfolio - Loc Pham Experience',
+  description: 'My education and work experience information',
+}
 
-function Experience() {
+export default function Experience() {
   const { serviceImages } = useImages();
 
   return (
@@ -131,5 +137,3 @@ function Experience() {
     </div>
   )
 }
-
-export default Experience

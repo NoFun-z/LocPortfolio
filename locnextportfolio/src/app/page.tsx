@@ -4,6 +4,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import useImages from '@/hooks/useImages';
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'My NextJS Portfolio - Loc Pham Bio',
+  description: 'Welcome to my Next.js portfolio website !!!',
+}
 
 export default function Home() {
   const { techImages } = useImages();

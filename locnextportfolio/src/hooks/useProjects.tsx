@@ -175,6 +175,6 @@ export default function useProjects() {
   ]
 
   return {
-    projects
+    projects,
   }
 }

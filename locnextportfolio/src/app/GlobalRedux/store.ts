@@ -2,11 +2,13 @@
 
 import {configureStore} from '@reduxjs/toolkit';
 import filterReducer from '@/app/GlobalRedux/Features/fillter/fiterSlice';
+import projectReducer from '@/app/GlobalRedux/Features/projects/projectSlice';
 import { useDispatch } from 'react-redux';
 
 export const store = configureStore({
     reducer: {
-        counter: filterReducer
+        counter: filterReducer,
+        project: projectReducer
     }
 })
 
