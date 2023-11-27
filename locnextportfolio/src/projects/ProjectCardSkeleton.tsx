@@ -21,7 +21,8 @@ export default function ProjectCardSkeleton({ project }: IProject) {
                     style={{ marginBottom: 20, marginTop: 20 }}
                 />
             </div>
-            <Skeleton className="pt-5 max-w-full md:h-64 lg:h-60 xl:h-52 md:object-contain" animation="wave" variant="rectangular" />
+            <Skeleton height={150}
+                width="100%" animation="wave" variant="rectangular" style={{ marginBottom: 8, marginTop: 20 }}/>
             <div className="pb-5 pt-5">
                 <Skeleton animation="wave" height={20} style={{ marginBottom: 12, marginTop: 6 }} />
                 <Skeleton animation="wave" height={20} width="30%" />
