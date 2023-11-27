@@ -1,7 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import { Project } from '@/models/project';
+import React, {  } from 'react'
 import { Grid, TableContainer, Table, TableBody, TableRow, TableCell } from '@mui/material';
 import Carousel from '@/utils/Carousel';
 import useProjects from '@/hooks/useProjects';
@@ -13,14 +12,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function ProjectDetails() {
   const { projects } = useProjects();
   const { projectId } = useParams();
-  const [projectData, setProjectData] = useState<Project | undefined>(undefined);
-
   //Retrieve project data
-  useEffect(() => {
-    if (projectId) {
-      setProjectData(projects.find(p => p.id === projectId.toString()))
-    }
-  }, [])
+  const projectData = projects.find(p => p.id === projectId.toString())
 
   if (!projectData) {
     return (

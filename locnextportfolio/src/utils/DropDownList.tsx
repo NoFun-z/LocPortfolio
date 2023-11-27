@@ -3,78 +3,136 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useAppDispatch, type RootState } from '../app/GlobalRedux/store';
 import { useSelector } from 'react-redux';
-import { setSortState } from '../app/GlobalRedux/Features/fillter/fiterSlice'
+import { setFilterState, setSortState } from '../app/GlobalRedux/Features/fillter/fiterSlice'
 
 
 export default function DropDownList() {
   //Make sure to reference useRef type when comparing other elements in the html
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [toggleSort, setToggleSort] = useState<boolean>(false);
+  const filterDropdownRef = useRef<HTMLDivElement>(null);
+  const [toggleDDL, setToggleDDL] = useState({ sortState: false, filterState: false });
   const dispatch = useAppDispatch();
   const sortTerm = useSelector((state: RootState) => state.counter.sortTerm);
+  const filterTerm = useSelector((state: RootState) => state.counter.filterTerm);
 
   const handleClickOutside = (event: any) => {
-    //Only set the toggle to false when the ddl is clicked first
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      // Click occurred outside the dropdown, close it
-      setToggleSort(false);
+    if (
+      (dropdownRef.current && !dropdownRef.current.contains(event.target))
+    ) {
+      // Click occurred outside the dropdowns, close both
+      setToggleDDL((prev) => ({ ...prev, sortState: false }));
+    }
+    if (
+      (filterDropdownRef.current && !filterDropdownRef.current.contains(event.target))
+    ) {
+      // Click occurred outside the dropdowns, close both
+      setToggleDDL((prev) => ({ ...prev, filterState: false }));
     }
   };
 
   useEffect(() => {
-    // Attach the event listener when the component mounts
     document.addEventListener('click', handleClickOutside);
 
-    // Detach the event listener when the component unmounts
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
 
   return (
-    <div ref={dropdownRef} className="font-mono z-20 relative w-40 before:content-['']
-      before:absolute before:-z-10 before:left-0 before:w-full before:h-full before:backdrop-blur-lg
-      md:before:backdrop-blur-md before:bg-slate-600/30 lg:before:bg-slate-800/40">
-      <div
-        onClick={() => setToggleSort(!toggleSort)}
-        className='flex justify-between items-center w-full text-gray-300 text-center font-bold 
-        text-base p-3 px-4 hover:cursor-pointer space-x-4 hover:text-zinc-900 hover:bg-slate-300'
-      >
-        <p>Sort By</p>
-        <span className={`filter-arrow-icon ${toggleSort ? 'expanded' : ''}`}>&#9650;</span>
-      </div>
-      <div
-        className={`${toggleSort ? '' : 'hidden'} text-center rounded-b absolute w-full before:content-['']
-        before:absolute before:-z-10 before:left-0 before:w-full before:h-full before:backdrop-blur-lg
-        md:before:backdrop-blur-md before:bg-slate-600/30 lg:before:bg-slate-800/40`}
-      >
-        <div onClick={() => dispatch(setSortState('All'))}
-          className={`${sortTerm === 'All' ?
-            'text-zinc-900 bg-slate-300 hover:opacity-70' :
-            'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+    <div className="flex gap-3">
+      {/* Sort */}
+      <div ref={dropdownRef} className="font-mono z-20 relative w-30 before:content-['']
+      before:absolute before:-z-10 before:left-0 before:w-full before:h-full before:backdrop-blur-md
+       before:bg-slate-600/30 lg:before:bg-slate-800/30">
+        <div
+          onClick={() => setToggleDDL((prev) => ({ ...prev, sortState: !prev.sortState }))}
+          className='flex justify-between items-center w-full text-gray-300 text-center font-bold 
+        text-base p-3 px-4 hover:cursor-pointer space-x-2 hover:text-zinc-900 hover:bg-slate-300'
+        >
+          <p>Sort By</p>
+          <span className={`filter-arrow-icon ${toggleDDL.sortState ? 'expanded' : ''}`}>&#9650;</span>
+        </div>
+        <div
+          className={`${toggleDDL.sortState ? '' : 'hidden'} text-center rounded-b absolute w-full before:content-['']
+        before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
+        before:backdrop-blur-md before:bg-slate-600/30 lg:before:bg-slate-800/30`}
+        >
+          <div onClick={() => dispatch(setSortState('All'))}
+            className={`${sortTerm === 'All' ?
+              'text-zinc-900 bg-slate-300 hover:opacity-70' :
+              'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
           font-bold p-4 text-base hover:cursor-pointer`}>
-          All
-        </div>
-        <div onClick={() => dispatch(setSortState('Popular'))}
-          className={`${sortTerm === 'Popular' ?
-            'text-zinc-900 bg-slate-300 hover:opacity-70' :
-            'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+            All
+          </div>
+          <div onClick={() => dispatch(setSortState('Popular'))}
+            className={`${sortTerm === 'Popular' ?
+              'text-zinc-900 bg-slate-300 hover:opacity-70' :
+              'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
         font-bold p-4 text-base hover:cursor-pointer`}>
-          Popular
-        </div>
-        <div onClick={() => dispatch(setSortState('Latest'))}
-          className={`${sortTerm === 'Latest' ?
-            'text-zinc-900 bg-slate-300 hover:opacity-70' :
-            'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+            Popular
+          </div>
+          <div onClick={() => dispatch(setSortState('Latest'))}
+            className={`${sortTerm === 'Latest' ?
+              'text-zinc-900 bg-slate-300 hover:opacity-70' :
+              'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
         font-bold p-4 text-base hover:cursor-pointer`}>
-          Latest
-        </div>
-        <div onClick={() => dispatch(setSortState('Oldest'))}
-          className={`${sortTerm === 'Oldest' ?
-            'text-zinc-900 bg-slate-300 hover:opacity-70' :
-            'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+            Latest
+          </div>
+          <div onClick={() => dispatch(setSortState('Oldest'))}
+            className={`${sortTerm === 'Oldest' ?
+              'text-zinc-900 bg-slate-300 hover:opacity-70' :
+              'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
         font-bold p-4 text-base hover:cursor-pointer`}>
-          Oldest
+            Oldest
+          </div>
+        </div>
+      </div>
+
+      {/* Filters */}
+      <div ref={filterDropdownRef} className="font-mono z-20 relative w-30 before:content-['']
+      before:absolute before:-z-10 before:left-0 before:w-full before:h-full before:backdrop-blur-md
+       before:bg-slate-600/30 lg:before:bg-slate-800/30">
+        <div
+          onClick={() => setToggleDDL((prev) => ({ ...prev, filterState: !prev.filterState }))}
+          className='flex justify-between items-center w-full text-gray-300 text-center font-bold 
+        text-base p-3 px-4 hover:cursor-pointer space-x-2 hover:text-zinc-900 hover:bg-slate-300'
+        >
+          <p>Filter</p>
+          <span className={`filter-arrow-icon ${toggleDDL.filterState ? 'expanded' : ''}`}>&#9650;</span>
+        </div>
+        <div
+          className={`${toggleDDL.filterState ? '' : 'hidden'} text-center rounded-b absolute w-full before:content-['']
+        before:absolute before:-z-10 before:left-0 before:w-full before:h-full 
+        before:backdrop-blur-md before:bg-slate-600/30 lg:before:bg-slate-800/30`}
+        >
+          <div onClick={() => dispatch(setFilterState('All'))}
+            className={`${filterTerm === 'All' ?
+              'text-zinc-900 bg-slate-300 hover:opacity-70' :
+              'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+          font-bold p-4 text-base hover:cursor-pointer`}>
+            All
+          </div>
+          <div onClick={() => dispatch(setFilterState('Software'))}
+            className={`${filterTerm === 'Software' ?
+              'text-zinc-900 bg-slate-300 hover:opacity-70' :
+              'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+        font-bold p-4 text-base hover:cursor-pointer`}>
+            Software
+          </div>
+          <div onClick={() => dispatch(setFilterState('Websites'))}
+            className={`${filterTerm === 'Websites' ?
+              'text-zinc-900 bg-slate-300 hover:opacity-70' :
+              'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+        font-bold p-4 text-base hover:cursor-pointer`}>
+            Websites
+          </div>
+          <div onClick={() => dispatch(setFilterState('Data'))}
+            className={`${filterTerm === 'Data' ?
+              'text-zinc-900 bg-slate-300 hover:opacity-70' :
+              'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
+        font-bold p-4 text-base hover:cursor-pointer`}>
+            Data
+          </div>
         </div>
       </div>
     </div>

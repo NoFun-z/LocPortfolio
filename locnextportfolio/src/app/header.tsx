@@ -118,7 +118,7 @@ export default function Header(props: any) {
 
     return (
         <body className="overflow-x-hidden bg-gradient-to-br from-zinc-900 to-slate-800
-         lg:from-indigo-950 lg:via-zinc-800 lg:to-slate-800
+         lg:from-indigo-900 lg:via-zinc-700 lg:to-slate-700
             ">
             {/* video background */}
             <VideoBackground />
@@ -165,8 +165,8 @@ export default function Header(props: any) {
             <section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-navbar' : 'hidden'} 
                 flex-col fixed z-40 top-1/2 transform -translate-y-1/2 left-5 w-18 h-30 gap-7 
                 before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full
-                before:rounded-full md:before:backdrop-blur-sm md:before:bg-slate-600/30 lg:before:bg-slate-800/40 p-3 py-8 justify-center 
-                text-center`}>
+                before:rounded-full md:before:backdrop-blur-sm lg:before:backdrop-blur-none md:before:bg-slate-600/30
+                 lg:before:bg-slate-700/20 p-3 py-8 justify-center text-center`}>
                 <VerticalActiveLink href="/" addStyle="p-2" isMobile={false}>
                     <AccountCircleIcon className='text-3xl' />
                 </VerticalActiveLink>
@@ -180,8 +180,8 @@ export default function Header(props: any) {
             {pathName !== "/" ? (<section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-contact' : 'hidden'} 
                 flex-col fixed z-40 top-1/2 transform -translate-y-1/2 right-5 w-18 h-30 gap-7 
                 before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full
-                before:rounded-full md:before:backdrop-blur-sm md:before:bg-slate-600/30
-                 lg:before:bg-slate-800/40 p-3 py-8 justify-center text-gray-300
+                before:rounded-full md:before:backdrop-blur-sm lg:before:backdrop-blur-none md:before:bg-slate-600/30
+                 lg:before:bg-slate-700/20 p-3 py-8 justify-center text-gray-300
                 text-center`}>
                 <a href='https://github.com/NoFun-z' target="_blank" rel="noopener noreferrer">
                     <GitHubIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
@@ -197,10 +197,10 @@ export default function Header(props: any) {
                 </a>
             </section>) : ''}
             <section className={`${scrollY > 300 && !menuState.isOpen ? 'flex animate-open-back-to-top' :
-                `hidden md:${scrollY > 300 ? 'flex' : 'hidden'} md:${scrollY > 300 ? 'animate-open-back-to-top' : ''}`}
-                fixed z-40 bottom-10 w-18 h-18 before:content-[''] before:absolute before:-z-10 before:left-0 before:backdrop-blur-lg
-                before:top-1 before:w-full before:h-full before:rounded-full md:before:backdrop-blur-sm
-                 before:bg-slate-600/30 lg:before:bg-slate-800/40 p-4 justify-center text-center 
+                `hidden md:${scrollY > 300 ? 'flex animate-open-back-to-top' : 'hidden'}`}
+                fixed z-40 bottom-10 w-18 h-18 before:content-[''] before:absolute before:-z-10 before:left-0 before:backdrop-blur-md
+                before:top-1 before:w-full before:h-full before:rounded-full md:before:backdrop-blur-none
+                 before:bg-slate-600/30 lg:before:bg-slate-700/20 p-4 justify-center text-center 
                  hover:cursor-pointer hover:text-zinc-900
                 hover:before:bg-slate-300 text-gray-300`} onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                 <NavigationIcon className='text-3xl' />

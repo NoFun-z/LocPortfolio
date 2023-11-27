@@ -4,26 +4,31 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export interface CounterState {
     searchTerm: string,
-    sortTerm: string
+    sortTerm: string,
+    filterTerm: string
 }
 
 const initialState: CounterState = {
     searchTerm: "",
-    sortTerm: "All"
+    sortTerm: "All",
+    filterTerm: "All"
 }
 
 export const filterSlice = createSlice({
     name: 'counter',
     initialState,
     reducers: {
-        setFilterState: (state, action) => {
+        setSearchState: (state, action) => {
             state.searchTerm = action.payload;
         },
         setSortState: (state, action) => {
             state.sortTerm = action.payload;
+        },
+        setFilterState: (state, action) => {
+            state.filterTerm = action.payload;
         }
     }
 })
 
-export const { setFilterState, setSortState } = filterSlice.actions;
+export const { setSearchState, setSortState, setFilterState } = filterSlice.actions;
 export default filterSlice.reducer;

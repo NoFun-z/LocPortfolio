@@ -33,7 +33,7 @@ body {
 
 .search-bar.focused {
   opacity: 1;
-  width: 160px;
+  width: 120px;
   cursor: text;
   margin-right: 5px;
 }

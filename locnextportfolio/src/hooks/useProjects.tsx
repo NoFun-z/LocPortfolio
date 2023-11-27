@@ -6,6 +6,7 @@ export default function useProjects() {
     {
       id: "pUFavKeEZfRhmjY4XkdyGzTL",
       name: "PAC software",
+      type: ["Software", "Websites"],
       technologies: "C#, ASP.NET MVC, SQLite, Jquery, JavaScript, HTML, CSS, Bootstrap, Razor, Azure",
       description: "A dynamic C# and ASP.NET MVC application designed for seamless client management. This full-stack solution, powered by SQLite, jQuery, Bootstrap, and Razor, not only streamlines client meetings, document organization, and user data management but also features an integrated auto-mailing system. Stay effortlessly connected with clients, automate communications, and enhance overall productivity. With robust admin authentication and authorization mechanisms, this application ensures secure data access",
       mainTools: "C#, Bootsrap, Jquery",
@@ -19,6 +20,7 @@ export default function useProjects() {
     // {
     //   id: "UAdwVz7a2GuF4trsgJ5bE3CW",
     //   name: "Blaze Ecom",
+    //   type: ["Software", "Websites"],
     //   technologies: "C#, Blazor, ASP.NET REST API, SQL Server, HTML, JavaScript, Bootstrap, Syncfusion, Stripe",
     //   description: "An e-commerce app combines Blazor, C#, SQL Server, Syncfusion, Bootstrap, and ASP.NET REST API to deliver a seamless shopping experience. With a visually appealing design powered by Syncfusion and Bootstrap for responsiveness, the app offers a user-friendly interface. The ASP.NET REST API ensures efficient communication with the SQL Server backend, managing data securely. This full-stack solution provides a modern and scalable platform for selling washroom soaps and candles online",
     //   mainTools: "C#, Blazor, Bootstrap",
@@ -32,6 +34,7 @@ export default function useProjects() {
     {
       id: "eYMmVW7hAugsFCw3Exk5N6LH",
       name: "Winter EStore",
+      type: ["Websites"],
       technologies: "C#, ASP.NET REST API, SQLite, React, Typescript, PostgresSQL, Docker, Flyio",
       description: "A sleek e-commerce application built with React, ASP.NET REST API, TypeScript, and PostgreSQL. Leveraging Docker for containerization and Fly.io for enhanced performance, the app offers a seamless winter shopping experience. It includes features like filtering, paging, and admin authentication for secure CRUD operations. The project demonstrates your proficiency in full-stack development, combining modern technologies to create an efficient and responsive online store for winter gear",
       mainTools: "C#, ASP.NET REST API, React",
@@ -45,6 +48,7 @@ export default function useProjects() {
     {
       id: "7834nzDka9UyrMmGe26ScEFw",
       name: "JQTask",
+      type: ["Websites"],
       technologies: "JqueryUI, HTML, CSS, C#, ASP.NET REST API, SQLite",
       description: "A single page task and board management website app inspired by Trello, developed with HTML, CSS, jQuery UI, and JavaScript for the frontend. The backend is powered by an ASP.NET Core REST API, providing a robust infrastructure for handling task and board-related operations. This project showcases my expertise in web development, combining client-side technologies for a dynamic and interactive user interface with a powerful backend to manage tasks and boards seamlessly",
       mainTools: "C#, JqueryUI",
@@ -58,6 +62,7 @@ export default function useProjects() {
     {
       id: "KAWxREpbNHGcC8ns79XZ5gF2",
       name: "ADO Emma",
+      type: ["Software"],
       technologies: "C#, ASP.NET CORE, SQL Server, ADO, HTML, CSS, Bootstrap",
       description: "An inventory, employees and orders management app, employing ADO, C#, and ASP.NET Core to handle seamless CRUD operations. The app allows efficient management of inventory, orders, and employee data, providing a comprehensive solution for business needs. With a secure login system, user authentication ensures that only authorized personnel can access and manipulate sensitive information",
       mainTools: "C#, ASP.NET CORE",
@@ -71,6 +76,7 @@ export default function useProjects() {
     {
       id: "EdqZsDtIrVc7G9bBQwThMSAW",
       name: "Portfolio Web",
+      type: ["Websites"],
       technologies: "HTML, CSS, JavaScript",
       description: "An old portfolio, designed with HTML, CSS, and JavaScript, elegantly displays your projects and resume. The clean structure and minimalistic design highlight your coding skills, offering a fast and engaging user experience",
       mainTools: "HTML, CSS",
@@ -84,6 +90,7 @@ export default function useProjects() {
     {
       id: "7PDt5QgBcJ9x3AVwhs2WpIXj",
       name: "Pacman UWP",
+      type: ["Software"],
       technologies: "C#",
       description: "Pac-Man game, crafted with C# UWP, takes the classic arcade experience to a new level. Dynamic moving obstacles ensures each playthrough is a unique challenge. The incorporation of skills, points, and levels enhances the gaming experience, adding layers of strategy and progression. The inclusion of a high-score system provides a competitive edge, motivating players to continually improve",
       mainTools: "C#",
@@ -97,6 +104,7 @@ export default function useProjects() {
     {
       id: "v9LKaJ8XB2mrw7qZnxRgHtys",
       name: "Contoso Retail",
+      type: ["Data"],
       technologies: "PowerBI, SQL",
       description: "A Power BI app illuminating Contoso Retail data, presenting clear visuals of profits and sales over the years. It provides a user-friendly interface for easy exploration and analysis, transforming complex data into actionable insights",
       mainTools: "PowerBI",
@@ -110,6 +118,7 @@ export default function useProjects() {
     {
       id: "2T4Be7RQJMtYyr6xVLhp8GnW",
       name: "Emma-Sales",
+      type: ["Websites"],
       technologies: "HTML, CSS, JavaScript",
       description: "A sales inventory website, built with HTML, CSS, and JavaScript, facilitates easy navigation, adheres to WCAG standards, and supports CRUD operations. It efficiently manages orders, allows item modification, and features an invoice form for completed orders, providing a user-friendly platform for seamless inventory control",
       mainTools: "JavaScript",
@@ -123,6 +132,7 @@ export default function useProjects() {
     {
       id: "u7BpNb3fKIF8HErqcTyCankJ",
       name: "EmpsC UWP",
+      type: ["Software"],
       technologies: "C#",
       description: "UWP C# app streamlines employee management by efficiently handling pay rates and allowing seamless editing of employee information.  A reliable tool for managing and updating essential employee details within your organization",
       mainTools: "C#",
@@ -136,6 +146,7 @@ export default function useProjects() {
     {
       id: "jXmgZRMPKpnWhItsa2YQCEuf",
       name: "Tech Blogs",
+      type: ["Websites"],
       technologies: "HTML, CSS",
       description: "A static AI blogs website, crafted with HTML and CSS, offers a user-friendly and informative experience with read-only data and a basic register form",
       mainTools: "CSS",
@@ -149,6 +160,7 @@ export default function useProjects() {
     {
       id: "9jx36QYIMWLE5dwf7VGHguRZ",
       name: "Covid Data",
+      type: ["Data"],
       technologies: "Python, Pandas, Jupyter NoteBook",
       description: "A simple COVID data app, implemented in Python using Pandas in a Jupyter notebook, delivers relevant information spanning 2019 to 2022. It efficiently displays key COVID data and complements it with informative charts, providing a concise and insightful overview of the pandemic trends during that period",
       mainTools: "Python",
@@ -162,6 +174,7 @@ export default function useProjects() {
     {
       id: "Ltrjp9nMdVE3UZ2x4cJvGDfN",
       name: "ISS web",
+      type: ["Websites"],
       technologies: "Wordpress, HTML, CSS, JavaScript, Hostinger",
       description: "A progressive platform driven by HTML, CSS, and JavaScript and built with WordPress. This responsive website combines a seamless integration of cutting-edge technologies with an easy-to-use interface. Innovative Solution Services is made to demonstrate creativity and provide a contemporary online presence, from interactive features to flexible design aspects",
       mainTools: "Wordpress, CSS",
