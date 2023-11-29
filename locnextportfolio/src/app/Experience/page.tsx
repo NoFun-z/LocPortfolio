@@ -30,8 +30,8 @@ export default function Experience() {
             including writting unit tests to ensure code integrity
           </li>
           <li className='mb-2 text-gray-300'>
-            Constructed applications in C# incorporating advanced concepts such as binary trees, linked lists,
-            arrays, polymorphism, indexer, inheritance, and classes
+            Constructed applications in C# incorporating advanced concepts such as binary trees, recursions,
+            linked lists, arrays, polymorphism, indexer, and inheritance
           </li>
           <li className='mb-2 text-gray-300'>
             Applied SQL expertise to handle SSIS, big data, retrieval, and database backup

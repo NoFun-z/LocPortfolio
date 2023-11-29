@@ -7,6 +7,7 @@ import { Providers } from './GlobalRedux/provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  icons: '/Images/profile-avatar.png',
   title: 'LocNextPortfolio',
   description: 'Built by Loc Pham @ 2023',
 }
