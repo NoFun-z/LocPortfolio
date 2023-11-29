@@ -14,6 +14,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import VideoBackground from './videoBackground';
+import { ThemeProvider, createTheme, useMediaQuery } from '@mui/material';
 
 interface ActiveLinkProps {
     href: string,
@@ -168,13 +169,13 @@ export default function Header(props: any) {
                 before:rounded-full md:before:backdrop-blur-sm lg:before:backdrop-blur-none md:before:bg-slate-600/30
                  lg:before:bg-slate-700/20 p-3 py-8 justify-center text-center`}>
                 <VerticalActiveLink href="/" addStyle="p-2" isMobile={false}>
-                    <AccountCircleIcon className='text-3xl' />
+                    <AccountCircleIcon style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                 </VerticalActiveLink>
                 <VerticalActiveLink href="/Experience" addStyle="p-2" isMobile={false}>
-                    <SchoolIcon className='text-3xl' />
+                    <SchoolIcon style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                 </VerticalActiveLink>
                 <VerticalActiveLink href="/Work" addStyle="p-2" isMobile={false}>
-                    <WorkspacesIcon className='text-3xl' />
+                    <WorkspacesIcon style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                 </VerticalActiveLink>
             </section>
             {pathName !== "/" ? (<section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-contact' : 'hidden'} 
@@ -184,16 +185,20 @@ export default function Header(props: any) {
                  lg:before:bg-slate-700/20 p-3 py-8 justify-center text-gray-300
                 text-center`}>
                 <a href='https://github.com/NoFun-z' target="_blank" rel="noopener noreferrer">
-                    <GitHubIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
+                    <GitHubIcon className='hover:cursor-pointer hover:opacity-70'
+                        style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                 </a>
                 <a href='https://www.linkedin.com/in/loc-pham-5039b7220/' target="_blank" rel="noopener noreferrer">
-                    <LinkedInIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
+                    <LinkedInIcon className='hover:cursor-pointer hover:opacity-70'
+                        style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                 </a>
                 <a href='https://twitter.com/NoFun51634720' target="_blank" rel="noopener noreferrer">
-                    <TwitterIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
+                    <TwitterIcon className='hover:cursor-pointer hover:opacity-70'
+                        style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                 </a>
                 <a href='https://www.facebook.com/hoangloc.pham.921/' target="_blank" rel="noopener noreferrer">
-                    <FacebookIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
+                    <FacebookIcon className='hover:cursor-pointer hover:opacity-70'
+                        style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                 </a>
             </section>) : ''}
             <section className={`${scrollY > 300 && !menuState.isOpen ? 'flex animate-open-back-to-top' :

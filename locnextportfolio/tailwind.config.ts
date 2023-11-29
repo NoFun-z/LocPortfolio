@@ -63,7 +63,10 @@ const config: Config = {
         'open-vertical-navbar': 'open-vertical-navbar 0.5s ease-in-out forwards',
         'open-vertical-contact': 'open-vertical-contact 0.5s ease-in-out forwards',
         'open-back-to-top': 'open-back-to-top 0.5s ease-in-out forwards',
-      }
+      },
+      '.important-class': {
+        important: true,
+      },
     },
   },
   plugins: [],
