@@ -228,7 +228,7 @@ export default function Header(props: any) {
                 {/* nav menu for mobile view */}
                 <section id='mobile-menu' className={`font-mono fixed z-30 pt-[124.78px] justify-center ${menuState.isOpen
                     ? 'flex animate-open-menu' : menuState.isClosing ? 'flex animate-close-menu' : 'hidden'}
-                     md:hidden w-full origin-top flex-col bg-slate-800 text-4xl px-0`}
+                     md:hidden w-full origin-top flex-col bg-slate-800 text-2xl px-0`}
                     style={{ fontFamily: 'monospace' }}>
                     <nav className="flex flex-col space-y-2 items-center py-8" aria-label="mobile">
                         <ActiveLink href="/" addStyle="w-full py-6 text-center" isMobile={true}>
