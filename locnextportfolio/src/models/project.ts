@@ -6,7 +6,7 @@ export interface Project{
     description: string,
     mainTools: string,
     publishedDate: string,
-    pictureURL: string,
+    pictureURL: string[],
     publishedLink: string,
     githubLink: string,
     favourite: boolean,

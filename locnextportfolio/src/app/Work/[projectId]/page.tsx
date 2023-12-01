@@ -49,10 +49,16 @@ export default function ProjectDetails() {
               {projectData.videoSrc ?
                 (<Carousel>
                   <video className='w-full' autoPlay controls src={projectData.videoSrc} muted />
-                  <img src={projectData.pictureURL} alt={projectData.name} className='rounded' />
+                  {...projectData.pictureURL.map(url => (
+                    <img key={url} src={url} alt={projectData.name} className='rounded' />
+                  ))}
                 </Carousel>)
                 :
-                <img src={projectData.pictureURL} alt={projectData.name} className='rounded' />}
+                (<Carousel>
+                  {...projectData.pictureURL.map(url => (
+                    <img key={url}  src={url} alt={projectData.name} className='rounded' />
+                  ))}
+                </Carousel>)}
               <div className='flex gap-7'>
                 {projectData.githubLink &&
                   <a href={projectData.githubLink} target="_blank" rel="noopener noreferrer">

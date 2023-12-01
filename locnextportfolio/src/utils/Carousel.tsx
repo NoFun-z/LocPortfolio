@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 
 export default function Carousel({ children: slides }: any) {
+    console.log(slides);
     const [current, setCurrent] = useState(0)
 
     const prev = () => {
