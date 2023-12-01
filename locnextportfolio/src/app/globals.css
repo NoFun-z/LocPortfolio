@@ -23,7 +23,6 @@ body {
 .search-bar {
   opacity: 0;
   padding-right: 8px;
-  font-size: medium;
   border: none;
   outline: none;
   width: 45px;
@@ -33,7 +32,7 @@ body {
 
 .search-bar.focused {
   opacity: 1;
-  width: 120px;
+  width: 170px;
   cursor: text;
   margin-right: 5px;
 }

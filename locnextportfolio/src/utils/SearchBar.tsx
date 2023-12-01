@@ -123,7 +123,7 @@ export default function SearchBar({ setIsLoading }: Props) {
                 <SearchIcon />
             </IconButton>
             <input
-                className={`search-bar ${isFocused ? 'focused' : ''}`}
+                className={`search-bar text-base md:text-lg xl:text-xl ${isFocused ? 'focused' : ''}`}
                 placeholder='By tools...'
                 value={searchTerm}
                 onChange={(e) => dispatch(setSearchState(e.target.value))}

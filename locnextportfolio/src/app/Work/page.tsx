@@ -18,7 +18,7 @@ export default function Work() {
   }
 
   return (
-    <div className='pt-12 mb-40 w-full'>
+    <div className='pt-14 md:pt-20 mb-40 w-full'>
       <div className='flex flex-col gap-6 md:gap-0 md:flex-row justify-between items-start md:items-center pt-8 mb-10 text-2xl font-bold text-sky-300'>
         <SearchBar setIsLoading={HandleLoading}/>
         <DropDownList />

@@ -47,7 +47,7 @@ export default function DropDownList() {
         <div
           onClick={() => setToggleDDL((prev) => ({ ...prev, sortState: !prev.sortState }))}
           className='flex justify-between items-center w-full text-gray-300 text-center font-bold 
-        text-base p-3 px-4 hover:cursor-pointer space-x-2 hover:text-zinc-900 hover:bg-slate-300'
+          text-base md:text-lg xl:text-xl p-3 px-4 hover:cursor-pointer space-x-2 hover:text-zinc-900 hover:bg-slate-300'
         >
           <p>Sort By</p>
           <span className={`filter-arrow-icon ${toggleDDL.sortState ? 'expanded' : ''}`}>&#9650;</span>
@@ -61,28 +61,28 @@ export default function DropDownList() {
             className={`${sortTerm === 'All' ?
               'text-zinc-900 bg-slate-300 hover:opacity-70' :
               'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
-          font-bold p-4 text-base hover:cursor-pointer`}>
+          font-bold p-4 text-base md:text-lg xl:text-xl hover:cursor-pointer`}>
             All
           </div>
           <div onClick={() => dispatch(setSortState('Popular'))}
             className={`${sortTerm === 'Popular' ?
               'text-zinc-900 bg-slate-300 hover:opacity-70' :
               'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
-        font-bold p-4 text-base hover:cursor-pointer`}>
+        font-bold p-4 text-base md:text-lg xl:text-xl hover:cursor-pointer`}>
             Popular
           </div>
           <div onClick={() => dispatch(setSortState('Latest'))}
             className={`${sortTerm === 'Latest' ?
               'text-zinc-900 bg-slate-300 hover:opacity-70' :
               'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
-        font-bold p-4 text-base hover:cursor-pointer`}>
+        font-bold p-4 text-base md:text-lg xl:text-xl hover:cursor-pointer`}>
             Latest
           </div>
           <div onClick={() => dispatch(setSortState('Oldest'))}
             className={`${sortTerm === 'Oldest' ?
               'text-zinc-900 bg-slate-300 hover:opacity-70' :
               'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
-        font-bold p-4 text-base hover:cursor-pointer`}>
+        font-bold p-4 text-base md:text-lg xl:text-xl hover:cursor-pointer`}>
             Oldest
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function DropDownList() {
         <div
           onClick={() => setToggleDDL((prev) => ({ ...prev, filterState: !prev.filterState }))}
           className='flex justify-between items-center w-full text-gray-300 text-center font-bold 
-        text-base p-3 px-4 hover:cursor-pointer space-x-2 hover:text-zinc-900 hover:bg-slate-300'
+          text-base md:text-lg xl:text-xl p-3 px-4 hover:cursor-pointer space-x-2 hover:text-zinc-900 hover:bg-slate-300'
         >
           <p>Filter</p>
           <span className={`filter-arrow-icon ${toggleDDL.filterState ? 'expanded' : ''}`}>&#9650;</span>
@@ -109,28 +109,28 @@ export default function DropDownList() {
             className={`${filterTerm === 'All' ?
               'text-zinc-900 bg-slate-300 hover:opacity-70' :
               'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
-          font-bold p-4 text-base hover:cursor-pointer`}>
+          font-bold p-4 text-base md:text-lg xl:text-xl hover:cursor-pointer`}>
             All
           </div>
           <div onClick={() => dispatch(setFilterState('Software'))}
             className={`${filterTerm === 'Software' ?
               'text-zinc-900 bg-slate-300 hover:opacity-70' :
               'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
-        font-bold p-4 text-base hover:cursor-pointer`}>
+        font-bold p-4 text-base md:text-lg xl:text-xl hover:cursor-pointer`}>
             Software
           </div>
           <div onClick={() => dispatch(setFilterState('Websites'))}
             className={`${filterTerm === 'Websites' ?
               'text-zinc-900 bg-slate-300 hover:opacity-70' :
               'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
-        font-bold p-4 text-base hover:cursor-pointer`}>
+        font-bold p-4 text-base md:text-lg xl:text-xl hover:cursor-pointer`}>
             Websites
           </div>
           <div onClick={() => dispatch(setFilterState('Data'))}
             className={`${filterTerm === 'Data' ?
               'text-zinc-900 bg-slate-300 hover:opacity-70' :
               'text-gray-300 hover:bg-slate-300 hover:text-zinc-900'}
-        font-bold p-4 text-base hover:cursor-pointer`}>
+        font-bold p-4 text-base md:text-lg xl:text-xl hover:cursor-pointer`}>
             Data
           </div>
         </div>

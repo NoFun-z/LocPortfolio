@@ -3,7 +3,7 @@ import Image from 'next/image'
 import EmailIcon from '@mui/icons-material/Email';
 import useImages from '@/hooks/useImages';
 import { Metadata } from 'next'
- 
+
 export const metadata: Metadata = {
   title: 'My NextJS Portfolio - Loc Pham Experience',
   description: 'My education and work experience information',
@@ -13,7 +13,7 @@ export default function Experience() {
   const { serviceImages } = useImages();
 
   return (
-    <div className="pt-8 md:pt-14 flex flex-col">
+    <div className="pt-14 md:pt-20 flex flex-col">
       <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>Education</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='font-mono mb-10 md:text-lg xl:text-xl'>
@@ -47,7 +47,7 @@ export default function Experience() {
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>Job Experience</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <div className='font-mono mb-10 md:text-lg xl:text-xl'>
+      <div className='font-mono mb-10 text-base md:text-lg xl:text-xl'>
         <p className='mb-3 font-bold' style={{ color: '#838fc9' }}>
           Computer Programming Peer Tutor - Niagara College <span className='font-light'>(2022-2023)</span>
         </p>
@@ -90,22 +90,22 @@ export default function Experience() {
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>References</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <div className='font-mono mb-10 md:text-lg xl:text-xl whitespace-pre-wrap'>
+      <div className='font-mono mb-10 font-medium md:text-lg xl:text-xl'>
         <ul className="list-disc pl-5">
           <li className='mb-2 text-gray-300'>
-            Gonul Turkdogan - gturkdogan@niagaracollege.ca
+            <span className='hidden md:inline-block'>Gonul Turkdogan -</span>{" "}gturkdogan@niagaracollege.ca
             <a className='ml-2' href="mailto:gturkdogan@niagaracollege.ca?subject=&body=Dear%20Ms. Gonul Turkdogan:">
               <EmailIcon className='hover:opacity-60' />
             </a>
           </li>
           <li className='mb-2 text-gray-300'>
-            David Stovell - dstovell@niagaracollege.ca
+            <span className='hidden md:inline-block'>David Stovell - </span>{" "}dstovell@niagaracollege.ca
             <a className='ml-2' href="mailto:dstovell@niagaracollege.ca?subject=&body=Dear%20Mr. David Stovell:">
               <EmailIcon className='hover:opacity-60' />
             </a>
           </li>
           <li className='mb-2 text-gray-300'>
-            Marsha Badeley - mbaddeley@niagaracollege.ca
+            <span className='hidden md:inline-block'>Marsha Badeley - </span>{" "}mbaddeley@niagaracollege.ca
             <a className='ml-2' href="mailto:mbaddeley@niagaracollege.ca?subject=&body=Dear%20Ms. Marsha Badeley:">
               <EmailIcon className='hover:opacity-60' />
             </a>
@@ -128,7 +128,7 @@ export default function Experience() {
                 width={250}
                 height={250}
               />
-              <div className="text-gray-300 text-center mt-5">{si.title}</div>
+              <div className="text-gray-300 text-center font-medium md:text-lg xl:text-xl mt-5">{si.title}</div>
             </div>
           </a>
         ))}

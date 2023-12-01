@@ -33,10 +33,10 @@ const config: Config = {
         },
         'open-menu-layout': {
           '0%': { transform: 'translateY(200%)' },
-          '100%': { transform: 'translateY(50%)' },
+          '100%': { transform: 'translateY(45%)' },
         },
         'close-menu-layout': {
-          '0%': { transform: 'translateY(50%)' },
+          '0%': { transform: 'translateY(45%)' },
           '100%': { transform: 'translateY(200%)' },
         },
         'open-vertical-navbar': {

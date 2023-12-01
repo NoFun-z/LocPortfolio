@@ -38,9 +38,9 @@ export default function Header(props: any) {
 
     // Adjust text size based on screen size
     if (isLargeScreen) {
-        logoStyle.width = '70%';
+        logoStyle.width = '80%';
     } else {
-        logoStyle.width = '50%';
+        logoStyle.width = '55%';
     }
 
     const ActiveLink = ({ href, addStyle, isMobile, children }: ActiveLinkProps) => {
@@ -100,7 +100,7 @@ export default function Header(props: any) {
     }, []);
 
     const navbarClasses = `absolute z-40 bg-slate-800 md:bg-transparent ${scrollY > 120 ? 'scrolled md:hidden' : ''}
-     ${scrollY > 60 ? 'scrolledY md:hidden' : ''} mx-auto flex w-full items-center justify-between py-4 px-4 sm:px-10
+     ${scrollY > 90 ? 'scrolledY md:hidden' : ''} mx-auto flex w-full items-center justify-between py-4 px-4 sm:px-10
       md:px-24 lg:px-36 xl:px-60`;
 
     // Add an event listener to handle animation end
@@ -165,7 +165,7 @@ export default function Header(props: any) {
                             </div>
                         </button>
                         {/* nav links */}
-                        <nav className="hidden space-x-4 text-xl md:block xl:pr-2" aria-label="main">
+                        <nav className="hidden space-x-4 text-2xl md:block xl:pr-2" aria-label="main">
                             <ActiveLink href="/" addStyle="px-3" isMobile={false}>
                                 Bio
                             </ActiveLink>
@@ -226,11 +226,11 @@ export default function Header(props: any) {
                     <NavigationIcon className='text-3xl' />
                 </section>
                 {/* nav menu for mobile view */}
-                <section id='mobile-menu' className={`font-mono fixed z-30 pt-[124.78px] justify-center ${menuState.isOpen
+                <section id='mobile-menu' className={`font-mono fixed z-30 pt-[74.78px] justify-center ${menuState.isOpen
                     ? 'flex animate-open-menu' : menuState.isClosing ? 'flex animate-close-menu' : 'hidden'}
                      md:hidden w-full origin-top flex-col bg-slate-800 text-2xl px-0`}
                     style={{ fontFamily: 'monospace' }}>
-                    <nav className="flex flex-col space-y-2 items-center py-8" aria-label="mobile">
+                    <nav className="flex flex-col space-y-2 items-center text-lg sm:text-xl py-8" aria-label="mobile">
                         <ActiveLink href="/" addStyle="w-full py-6 text-center" isMobile={true}>
                             Bio
                         </ActiveLink>

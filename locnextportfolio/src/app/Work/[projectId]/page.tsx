@@ -94,26 +94,42 @@ export default function ProjectDetails() {
             </div>
           </Grid>
           <Grid item xs={12}>
-            <div className='font-mono text-2xl lg:text-4xl font-bold' style={{ color: '#838fc9' }}>{projectData.name}</div>
+            <div className='font-mono text-xl md:text-2xl lg:text-3xl font-bold' style={{ color: '#838fc9' }}>{projectData.name}</div>
             <hr className="mb-12 mt-2 h-2 w-full" style={{ backgroundColor: '#838fc9' }} />
             <TableContainer>
               <Table>
                 <TableBody>
                   <TableRow>
-                    <TableCell style={tableCellStyle}>Technologies</TableCell>
-                    <TableCell style={dataCellStyle}>{projectData.technologies}</TableCell>
+                    <TableCell style={{ color: '#838fc9' }}>
+                      <span className='font-mono font-bold text-lg md:text-xl xl:text-2xl'>Technologies</span>
+                    </TableCell>
+                    <TableCell><span className='font-mono text-gray-300 text-base md:text-lg xl:text-xl'>
+                      {projectData.technologies}</span>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell style={tableCellStyle}>Description</TableCell>
-                    <TableCell style={dataCellStyle}>{projectData.description}</TableCell>
+                    <TableCell style={{ color: '#838fc9' }}>
+                      <span className='font-mono font-bold text-lg md:text-xl xl:text-2xl'>Description</span>
+                    </TableCell>
+                    <TableCell><span className='font-mono text-gray-300 text-base md:text-lg xl:text-xl'>
+                      {projectData.description}</span>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell style={tableCellStyle}>Main Tools</TableCell>
-                    <TableCell style={dataCellStyle}>{projectData.mainTools}</TableCell>
+                    <TableCell style={{ color: '#838fc9' }}>
+                      <span className='font-mono font-bold text-lg md:text-xl xl:text-2xl'>Main Tools</span>
+                    </TableCell>
+                    <TableCell><span className='font-mono text-gray-300 text-base md:text-lg xl:text-xl'>
+                      {projectData.mainTools}</span>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell style={tableCellStyle}>Published Date</TableCell>
-                    <TableCell style={dataCellStyle}>{projectData.publishedDate}</TableCell>
+                    <TableCell style={{ color: '#838fc9' }}>
+                      <span className='font-mono font-bold text-lg md:text-xl xl:text-2xl'>Published Date</span>
+                    </TableCell>
+                    <TableCell><span className='font-mono text-gray-300 text-base md:text-lg xl:text-xl'>
+                      {projectData.publishedDate}</span>
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
