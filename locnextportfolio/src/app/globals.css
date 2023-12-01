@@ -53,6 +53,11 @@ body {
   border-bottom: 2px solid #838fc9;
 }
 
+td {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 video::-webkit-media-controls-volume-slider {
   display: none;
 }

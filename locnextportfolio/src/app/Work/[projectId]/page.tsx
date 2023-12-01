@@ -25,23 +25,6 @@ export default function ProjectDetails() {
     )
   }
 
-  const tableCellStyle = {
-    fontFamily: 'monospace',
-    fontSize: '1rem', // base size
-    lineHeight: '1.5rem', // base line-height
-    fontWeight: 'bold', // for font-bold in Tailwind CSS
-    width: '4rem', // for lg:w-44 in Tailwind CSS
-    color: '#838fc9',
-  };
-
-  const dataCellStyle = {
-    fontFamily: 'monospace',
-    fontSize: '1rem', // base size
-    lineHeight: '1.5rem', // base line-height
-    color: 'rgb(209, 213, 219)', // for text-gray-300 in Tailwind CSS
-    // Add other styles as needed
-  };
-
   const gitHubIconStyle = {
     fontSize: '2.25rem', // base size
     lineHeight: '2.5rem', // base line-height
@@ -50,17 +33,9 @@ export default function ProjectDetails() {
 
   // Adjust text size based on screen size
   if (isLargeScreen) {
-    tableCellStyle.fontSize = '1.125rem';
-    tableCellStyle.lineHeight = '1.75rem';
-    dataCellStyle.fontSize = '1.125rem';
-    dataCellStyle.lineHeight = '1.75rem';
     gitHubIconStyle.fontSize = '3rem';
     gitHubIconStyle.lineHeight = '1';
   } else {
-    tableCellStyle.fontSize = '1rem';
-    tableCellStyle.lineHeight = '1.5rem';
-    dataCellStyle.fontSize = '1rem';
-    dataCellStyle.lineHeight = '1.5rem';
     gitHubIconStyle.fontSize = '2.25rem';
     gitHubIconStyle.lineHeight = '2.5rem';
   }
@@ -73,7 +48,7 @@ export default function ProjectDetails() {
             <div className='flex flex-col gap-10 justify-center'>
               {projectData.videoSrc ?
                 (<Carousel>
-                  <video autoPlay controls src={projectData.videoSrc} muted />
+                  <video className='w-full' autoPlay controls src={projectData.videoSrc} muted />
                   <img src={projectData.pictureURL} alt={projectData.name} className='rounded' />
                 </Carousel>)
                 :
@@ -95,8 +70,8 @@ export default function ProjectDetails() {
           </Grid>
           <Grid item xs={12}>
             <div className='font-mono text-xl md:text-2xl lg:text-3xl font-bold' style={{ color: '#838fc9' }}>{projectData.name}</div>
-            <hr className="mb-12 mt-2 h-2 w-full" style={{ backgroundColor: '#838fc9' }} />
-            <TableContainer>
+            <hr className="mb-8 mt-2 h-2 w-full" style={{ backgroundColor: '#838fc9' }} />
+            {isLargeScreen ? (<TableContainer>
               <Table>
                 <TableBody>
                   <TableRow>
@@ -133,7 +108,47 @@ export default function ProjectDetails() {
                   </TableRow>
                 </TableBody>
               </Table>
-            </TableContainer>
+            </TableContainer>) : (<div>
+              <div className='flex flex-col gap-4'>
+                <span style={{ color: '#838fc9' }} className='font-mono font-bold text-lg md:text-xl xl:text-2xl'>
+                  Technologies
+                </span>
+                <span className='font-mono text-gray-300 text-base md:text-lg xl:text-xl'>
+                  {projectData.technologies}
+                </span>
+              </div>
+              <hr className="mb-6 mt-6 h-1 w-full" style={{ backgroundColor: '#838fc9' }} />
+
+              <div className='flex flex-col gap-4'>
+                <span style={{ color: '#838fc9' }} className='font-mono font-bold text-lg md:text-xl xl:text-2xl'>
+                  Description
+                </span>
+                <span className='font-mono text-gray-300 text-base md:text-lg xl:text-xl'>
+                  {projectData.description}
+                </span>
+              </div>
+              <hr className="mb-6 mt-6 h-1 w-full" style={{ backgroundColor: '#838fc9' }} />
+
+              <div className='flex flex-col gap-4'>
+                <span style={{ color: '#838fc9' }} className='font-mono font-bold text-lg md:text-xl xl:text-2xl'>
+                  Main Tools
+                </span>
+                <span className='font-mono text-gray-300 text-base md:text-lg xl:text-xl'>
+                  {projectData.mainTools}
+                </span>
+              </div>
+              <hr className="mb-6 mt-6 h-1 w-full" style={{ backgroundColor: '#838fc9' }} />
+
+              <div className='flex flex-col gap-4'>
+                <span style={{ color: '#838fc9' }} className='font-mono font-bold text-lg md:text-xl xl:text-2xl'>
+                  Published Date
+                </span>
+                <span className='font-mono text-gray-300 text-base md:text-lg xl:text-xl'>
+                  {projectData.publishedDate}
+                </span>
+              </div>
+              <hr className="mb-6 mt-6 h-1 w-full" style={{ backgroundColor: '#838fc9' }} />
+            </div>)}
           </Grid>
         </Grid>
       </div>
