@@ -56,7 +56,7 @@ export default function ProjectDetails() {
                 :
                 (<Carousel>
                   {...projectData.pictureURL.map(url => (
-                    <img key={url}  src={url} alt={projectData.name} className='rounded' />
+                    <img key={url} src={url} alt={projectData.name} className='rounded' />
                   ))}
                 </Carousel>)}
               <div className='flex gap-7'>

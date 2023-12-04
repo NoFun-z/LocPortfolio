@@ -91,6 +91,16 @@ export default function useImages() {
             src: "/Images/Technologies/Wordpress.png",
             alt: "Wordpress",
         },
+        {
+            href: "https://learn.microsoft.com/en-us/powershell/",
+            src: "/Images/Technologies/PowerShell.png",
+            alt: "PowerShell",
+        },
+        {
+            href: "https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/",
+            src: "/Images/Technologies/Bash-Script.png",
+            alt: "Bash Script",
+        },
     ]
 
     const serviceImages = [
