@@ -4,8 +4,8 @@ import React from 'react'
 export default function DownloadButton() {
 
     const handleDownload = () => {
-        const pdfUrl = './LocPham resume.pdf';
-        const pdfName = 'LocPham resume.pdf';
+        const pdfUrl = '/Files/LocPham-Resume.pdf';
+        const pdfName = 'LocPham-Resume.pdf';
         downloadPdf(pdfUrl, pdfName);
     }
 
