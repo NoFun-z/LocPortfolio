@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: IProject) {
     useEffect(() => {
         const calculateSubstringLength = () => {
             if (window.innerWidth >= 768) {
-                return 24; // Use a shorter substring for medium-sized screens
+                return 18; // Use a shorter substring for medium and large sized screens
             } else {
                 return 30; // Use an even shorter substring for smaller screens
             }
