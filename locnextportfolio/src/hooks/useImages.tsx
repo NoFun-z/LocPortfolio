@@ -37,11 +37,6 @@ export default function useImages() {
             alt: "Python",
         },
         {
-            href: "https://developer.android.com/modern-android-development",
-            src: "/Images/Technologies/Android-Studio.png",
-            alt: "Android Studio Java",
-        },
-        {
             href: "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started",
             src: "/Images/Technologies/HTML.png",
             alt: "HTML 5",
