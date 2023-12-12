@@ -109,7 +109,7 @@ export default function useImages() {
             href: "https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5",
             src: "/Images/Education/Database-Design.png",
             alt: "Database Design",
-            title: "Data Design"
+            title: "Database Design"
         },
         {
             href: "https://dotnet.microsoft.com/en-us/apps/aspnet/apis",
@@ -118,7 +118,7 @@ export default function useImages() {
             title: "APIs"
         },
         {
-            href: "https://www.shopify.com/ca/blog/what-is-ecommerce",
+            href: "https://www.techtarget.com/searchcio/definition/e-commerce",
             src: "/Images/Education/Ecommerce-Store.png",
             alt: "Ecommerce Store",
             title: "Ecommerce"
