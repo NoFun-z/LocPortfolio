@@ -23,17 +23,25 @@ export default function Home() {
           <p className='text-gray-300 font-bold text-lg md:text-2xl xl:text-4xl'>MY NAME IS LOC PHAM</p>
           <p className='font-mono text-green-600 font-medium text-base md:text-lg xl:text-xl'>A passionate computer programmer</p>
           <div className="text-gray-300 flex gap-6 justify-center lg:justify-start">
-            <a href='https://github.com/NoFun-z' target="_blank" rel="noopener noreferrer">
-              <GitHubIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
+            <a href='https://www.niagaracollege.ca/' target="_blank" rel="noopener noreferrer">
+              <Image src="/Images/Home/NC-icon.png"
+                alt="avatar"
+                width={80}
+                height={80} />
             </a>
-            <a href='https://www.linkedin.com/in/loc-pham-5039b7220/' target="_blank" rel="noopener noreferrer">
-              <LinkedInIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
+            <a href='https://www.microsoft.com/en-us/microsoft-365/products-apps-services' target="_blank" rel="noopener noreferrer">
+              <Image src="/Images/Home/microsoft-logo.jpg"
+                alt="avatar"
+                width={80}
+                height={80} 
+                style={{borderRadius: "50%"}} />
             </a>
-            <a href='https://twitter.com/NoFun51634720' target="_blank" rel="noopener noreferrer">
-              <TwitterIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
-            </a>
-            <a href='https://www.facebook.com/hoangloc.pham.921/' target="_blank" rel="noopener noreferrer">
-              <FacebookIcon className='text-3xl md:text-4xl hover:cursor-pointer hover:text-slate-500' />
+            <a href='https://www.udemy.com/' target="_blank" rel="noopener noreferrer">
+              <Image src="/Images/Home/Udemy-Emblem.png"
+                alt="avatar"
+                width={82}
+                height={82}
+                style={{borderRadius: "50%"}}/>
             </a>
           </div>
           <DownloadButton />

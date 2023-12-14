@@ -133,9 +133,7 @@ export default function Header(props: any) {
 
     return (
         <ThemeProvider theme={theme}>
-            <body className="overflow-x-hidden bg-gradient-to-br from-zinc-900 to-slate-800
-         lg:from-indigo-900 lg:via-zinc-700 lg:to-slate-700
-            ">
+            <body className="overflow-x-hidden bg-gradient-to-br from-zinc-900 to-slate-800">
                 {/* video background */}
                 <VideoBackground />
                 {/* nav bar */}
@@ -193,7 +191,7 @@ export default function Header(props: any) {
                         <WorkspacesIcon style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                     </VerticalActiveLink>
                 </section>
-                {pathName !== "/" ? (<section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-contact' : 'hidden'} 
+                <section className={`${scrollY > 100 ? 'hidden md:flex animate-open-vertical-contact' : 'hidden'} 
                 flex-col fixed z-40 top-1/2 transform -translate-y-1/2 right-5 w-18 h-30 gap-7 
                 before:content-[''] before:absolute before:-z-10 before:left-0 before:w-full before:h-full
                 before:rounded-full md:before:backdrop-blur-sm lg:before:backdrop-blur-none md:before:bg-slate-600/30
@@ -215,7 +213,7 @@ export default function Header(props: any) {
                         <FacebookIcon className='hover:cursor-pointer hover:opacity-70'
                             style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                     </a>
-                </section>) : ''}
+                </section>
                 <section className={`${scrollY > 300 && !menuState.isOpen ? 'flex animate-open-back-to-top' :
                     `hidden md:${scrollY > 300 ? 'flex animate-open-back-to-top' : 'hidden'}`}
                 fixed z-40 bottom-10 w-18 h-18 before:content-[''] before:absolute before:-z-10 before:left-0 before:backdrop-blur-md
