@@ -22,10 +22,6 @@ export default function Experience() {
         </p>
         <ul className="list-disc pl-5">
           <li className='mb-2 text-gray-300'>
-            Collaborated with peers to develop a business member meetings application
-            featuring CRUD operations and authentication with C#, ASP.NET, SQLite, JavaScript, and Bootstrap
-          </li>
-          <li className='mb-2 text-gray-300'>
             Developed functional server-side components using REST APIs using GET/POST/DELETE/PUT requests,
             including writting unit tests to ensure code integrity
           </li>
@@ -49,7 +45,7 @@ export default function Experience() {
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='font-mono mb-10 text-base md:text-lg xl:text-xl'>
         <p className='mb-3 font-bold' style={{ color: '#838fc9' }}>
-          Computer Programming Peer Tutor - Niagara College <span className='font-light'>(2022-2023)</span>
+          Computer Programming Peer Tutor - Niagara College <span className='font-light'>(August 2023- Dec 2023)</span>
         </p>
         <ul className="list-disc pl-5">
           <li className='mb-2 text-gray-300'>
@@ -65,6 +61,23 @@ export default function Experience() {
           <li className='mb-2 text-gray-300'>
             Created reports and provided solutions to aid students in their improvement with the
             peer tutor coordinator
+          </li>
+        </ul>
+        <p className='mb-3 font-bold' style={{ color: '#838fc9' }}>
+          Game Tech - Cineplex (Niagara College Internship)  <span className='font-light'>(May 2023- Sep 2023)</span>
+        </p>
+        <ul className="list-disc pl-5">
+          <li className='mb-2 text-gray-300'>
+            Executed networking tasks, established LANs, managed hardware, and maintained databases for the Cineplex game system
+          </li>
+          <li className='mb-2 text-gray-300'>
+            Developed and deployed a community-based full-stack ASP.NET MVC application designed for seamless meetings management integrated auto-mailing system for Niagara College Committee Advisors
+          </li>
+          <li className='mb-2 text-gray-300'>
+            Led the community-based project presentation management, including slides, github source control pull requests
+          </li>
+          <li className='mb-2 text-gray-300'>
+            Utilized Agile methodology, managing weekly sprints and tasks. Conducted daily code testing, improvements, and attended client meetings
           </li>
         </ul>
         <p className='pt-3 mb-3 font-bold' style={{ color: '#838fc9' }}>
