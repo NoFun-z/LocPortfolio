@@ -29,15 +29,15 @@ export default function Home() {
               <Image src="/Images/Home/microsoft-logo.jpg"
                 alt="avatar"
                 width={80}
-                height={80} 
-                style={{borderRadius: "50%"}} />
+                height={80}
+                style={{ borderRadius: "50%" }} />
             </a>
             <a href='https://www.udemy.com/' target="_blank" rel="noopener noreferrer">
               <Image src="/Images/Home/Udemy-Emblem.png"
                 alt="avatar"
                 width={82}
                 height={82}
-                style={{borderRadius: "50%"}}/>
+                style={{ borderRadius: "50%" }} />
             </a>
           </div>
           <DownloadButton />
@@ -56,11 +56,14 @@ export default function Home() {
       <section
         className="font-mono mb-40 pt-20 text-center">
         <p className='text-xl md:text-2xl lg:text-3xl font-bold' style={{ color: '#838fc9' }}>About me</p>
-        <p className='text-gray-300 pt-20 text-base md:text-lg xl:text-xl'>I am a programmer specializing in building
-          full-stack applications utilizing modern front-end JavaScript frameworks such as React,
-          Vue.js, Angular, jQuery UI, along with other frameworks like Blazor and MVC. My expertise extends
-          to setting up databases with SQL Server, programming functional server-side elements with REST APIs,
-          C#, and integrating payment services using platforms like Stripe</p>
+        <p className='text-gray-300 pt-20 text-base md:text-lg xl:text-xl'>I am a programmer specializing in
+          developing full-stack applications using modern front-end JavaScript frameworks like React, Vue.js,
+          Angular, jQuery UI, along with other frameworks such as Blazor and MVC. My expertise includes
+          integrating projects with Azure services like Blob Storage, Service Bus, Trigger Functions,
+          coupled with seamless deployment using Azure DevOps. My expertise extends to setting up databases with SQL Server, Azure SQL,
+          programming robust server-side elements through RESTful ASP.NET APIs and C#, and integrating secure payment
+          services, including platforms like Stripe</p>
+
 
         <p className='text-gray-300 pt-8 text-base md:text-lg xl:text-xl'>My commitment to promoting creativity is demonstrated by my
           constant exploration of modern technologies and approaches. I get satisfaction from coming up with

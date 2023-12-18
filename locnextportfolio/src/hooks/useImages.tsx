@@ -17,6 +17,11 @@ export default function useImages() {
             alt: "ASP.NET Core",
         },
         {
+            href: "https://azure.microsoft.com/en-ca/resources/cloud-computing-dictionary/what-is-azure/?&ef_id=_k_CjwKCAiA-P-rBhBEEiwAQEXhH9AHNgUNwF-QUnNeWBp1HlAjZk9-Xpi7_5PJg30nNNcKa49otdTmAxoCwv0QAvD_BwE_k_&OCID=AIDcmmqz3gd78m_SEM__k_CjwKCAiA-P-rBhBEEiwAQEXhH9AHNgUNwF-QUnNeWBp1HlAjZk9-Xpi7_5PJg30nNNcKa49otdTmAxoCwv0QAvD_BwE_k_&gad_source=1&gclid=CjwKCAiA-P-rBhBEEiwAQEXhH9AHNgUNwF-QUnNeWBp1HlAjZk9-Xpi7_5PJg30nNNcKa49otdTmAxoCwv0QAvD_BwE",
+            src: "/Images/Technologies/Microsoft-Azure.png",
+            alt: "Microsoft Azure",
+        },
+        {
             href: "https://powerbi.microsoft.com/en-ca/",
             src: "/Images/Technologies/PowerBI.png",
             alt: "Microsoft PowerBi",
