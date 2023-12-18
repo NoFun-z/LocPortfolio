@@ -1,8 +1,7 @@
 'use client';
 
-import { EntityState, createAsyncThunk, createEntityAdapter, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { Project } from '@/models/project';
-import { RootState } from '../../store';
 
 const projects = [
     {
@@ -160,6 +159,22 @@ const projects = [
         githubLink: "https://github.com/NoFun-z/Blogger-UI",
         favourite: false,
         videoSrc: "/Videos/Blog-UI-Project.mp4",
+    },
+    {
+        id: "cfycqsGhrqEfCw8QB75sdP44",
+        name: "Admin Dashboard",
+        type: ["Data", "Software", "Websites"],
+        technologies: "C#, ASP.NET Core, ASP.NET MVC, Microsoft Azure, SQL Server, Syncfusion",
+        description: "A financial management Azure-based MVC project. Using Azure SQL, Functions, Blob Storage, and Service Bus, this admin dashboard provides real-time insights into income and expense reports across diverse categories",
+        mainTools: "ASP.NET MVC, Microsoft Azure",
+        publishedDate: "12/13/2023",
+        pictureURL: ["/Images/Projects/Admin-Dashboard.jpg", "/Images/Projects/Admin-Dashboard-2.jpg",
+            "/Images/Projects/Admin-Dashboard-3.jpg", "/Images/Projects/Admin-Dashboard-4.jpg",
+            "/Images/Projects/Admin-Dashboard-5.jpg"],
+        publishedLink: "",
+        githubLink: "https://github.com/NoFun-z/Az-PostAL-23",
+        favourite: true,
+        videoSrc: "/Videos/Admin-Dashboard.mp4",
     },
     {
         id: "KgzJPt4HBrsCEJM84TKHe5EV",
