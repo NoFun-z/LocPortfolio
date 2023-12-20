@@ -29,7 +29,7 @@ const projects = [
         publishedDate: "10/11/2023",
         pictureURL: ["/Images/Projects/MangoMicro.jpg", "/Images/Projects/MangoMicro-2.jpg",
             "/Images/Projects/MangoMicro-3.jpg", "/Images/Projects/MangoMicro-4.jpg"],
-        publishedLink: "mangomicroserviceweb23.azurewebsites.net",
+        publishedLink: "https://mangomicroserviceweb23.azurewebsites.net",
         githubLink: "https://github.com/NoFun-z/MangoMicro",
         favourite: true,
         videoSrc: "/Videos/MangoMicro.mp4",
