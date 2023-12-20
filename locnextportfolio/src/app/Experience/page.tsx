@@ -64,7 +64,7 @@ export default function Experience() {
           </li>
         </ul>
         <p className='mb-3 font-bold' style={{ color: '#838fc9' }}>
-          Game Tech - Cineplex (Niagara College Internship)  <span className='font-light'>(May 2023- Sep 2023)</span>
+          Game Tech - Cineplex - Niagara College Internship  <span className='font-light'>(May 2023- Sep 2023)</span>
         </p>
         <ul className="list-disc pl-5">
           <li className='mb-2 text-gray-300'>

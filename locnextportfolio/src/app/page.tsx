@@ -60,7 +60,7 @@ export default function Home() {
           developing full-stack applications using modern front-end JavaScript frameworks like React, Vue.js,
           Angular, jQuery UI, along with other frameworks such as Blazor and MVC. My expertise includes
           integrating projects with Azure services like Blob Storage, Service Bus, Trigger Functions,
-          coupled with seamless deployment using Azure DevOps. My expertise extends to setting up databases with SQL Server, Azure SQL,
+          coupled with continuous integration and automated deployment using CI/CD pipeline on Azure DevOps. My expertise extends to setting up databases with SQL Server, Azure SQL,
           programming robust server-side elements through RESTful ASP.NET APIs and C#, and integrating secure payment
           services, including platforms like Stripe</p>
 
