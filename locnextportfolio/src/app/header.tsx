@@ -133,7 +133,7 @@ export default function Header(props: any) {
 
     return (
         <ThemeProvider theme={theme}>
-            <body className="overflow-x-hidden bg-gradient-to-br from-zinc-900 to-slate-800">
+            <body className="overflow-x-hidden bg-gradient-to-br from-zinc-900 to-slate-800 lg:from-zinc-800 lg:to-slate-800">
                 {/* video background */}
                 <VideoBackground />
                 {/* nav bar */}
