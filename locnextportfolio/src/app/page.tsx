@@ -57,8 +57,8 @@ export default function Home() {
         className="font-mono mb-40 pt-20 text-center">
         <p className='text-xl md:text-2xl lg:text-3xl font-bold' style={{ color: '#838fc9' }}>About me</p>
         <p className='text-gray-300 pt-20 text-base md:text-lg xl:text-xl'>I am a programmer specializing in
-          developing full-stack applications using modern front-end JavaScript frameworks like React, Vue.js,
-          Angular, jQuery UI, along with other frameworks such as Blazor and MVC. My expertise includes
+          developing full-stack .NET applications using modern front-end JavaScript frameworks like React,
+          Angular, jQuery UI, or other frameworks such as Blazor and MVC. My expertise includes
           integrating projects with Azure services like Blob Storage, Service Bus, Trigger Functions,
           coupled with continuous integration and automated deployment using CI/CD pipeline on Azure DevOps. My expertise extends to setting up databases with SQL Server, Azure SQL,
           programming robust server-side elements through RESTful ASP.NET APIs and C#, and integrating secure payment
