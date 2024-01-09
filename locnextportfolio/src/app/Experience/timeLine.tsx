@@ -4,6 +4,7 @@ import React from 'react'
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator, timelineItemClasses } from '@mui/lab';
 import SchoolIcon from '@mui/icons-material/School';
 import LaptopIcon from '@mui/icons-material/Laptop';
+import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility';
 
 export default function WorkTimeLine() {
     return (
@@ -16,6 +17,34 @@ export default function WorkTimeLine() {
             <TimelineItem>
                 <TimelineSeparator>
                     <TimelineDot style={{ border: '2px solid #838fc9', padding: '12px' }} variant="outlined">
+                        <SettingsAccessibilityIcon style={{ color: 'rgb(209 213 219)' }} />
+                    </TimelineDot>
+                    <TimelineConnector sx={{ bgcolor: '#b8bfe0' }} />
+                </TimelineSeparator>
+                <TimelineContent sx={{ pt: '24px', px: 4, textAlign: 'left' }}>
+                    <span className='mb-3 p-2 font-bold font-mono text-sm md:text-base xl:text-lg'
+                        style={{ backgroundColor: '#4655a0', color: 'rgb(209 213 219)' }}>
+                        Jul 2023 - Current
+                    </span>
+                    <p className='mt-10 mb-3 font-bold font-mono text-base md:text-lg xl:text-xl' style={{ color: '#838fc9' }}>
+                        Freelance Full Stack .NET Developer - Upwork
+                    </p>
+                    <ul className="list-disc pl-5 font-mono mb-10 text-base md:text-lg xl:text-xl">
+                        <li className='mb-2 text-gray-300'>
+                            Developed websites, data solutions, and software by with React, Angular, .NET REST API, MVC, and ASP.NET
+                        </li>
+                        <li className='mb-2 text-gray-300'>
+                            Constructed database models from the ground up, utilizing SQL and Azure for optimal performance and functionality
+                        </li>
+                        <li className='mb-2 text-gray-300'>
+                            Engaged in regular client discussions, gathering feedback, and deployed continuous improvement throughout the software development life cycle
+                        </li>
+                    </ul>
+                </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+                <TimelineSeparator>
+                    <TimelineDot style={{ border: '2px solid #838fc9', padding: '12px' }} variant="outlined">
                         <SchoolIcon style={{ color: 'rgb(209 213 219)' }} />
                     </TimelineDot>
                     <TimelineConnector sx={{ bgcolor: '#b8bfe0' }} />
@@ -23,7 +52,7 @@ export default function WorkTimeLine() {
                 <TimelineContent sx={{ pt: '24px', px: 4, textAlign: 'left' }}>
                     <span className='mb-3 p-2 font-bold font-mono text-sm md:text-base xl:text-lg'
                         style={{ backgroundColor: '#4655a0', color: 'rgb(209 213 219)' }}>
-                        August 2023 - Dec 2023
+                        Aug 2023 - Dec 2023
                     </span>
                     <p className='mt-10 mb-3 font-bold font-mono text-base md:text-lg xl:text-xl' style={{ color: '#838fc9' }}>
                         Computer Programming Peer Tutor - Niagara College
