@@ -71,11 +71,11 @@ export default function useImages() {
             src: "/Images/Technologies/React.png",
             alt: "ReactJS",
         },
-        {
-            href: "https://vuejs.org/guide/introduction.html",
-            src: "/Images/Technologies/Vue.png",
-            alt: "VueJS",
-        },
+        // {
+        //     href: "https://vuejs.org/guide/introduction.html",
+        //     src: "/Images/Technologies/Vue.png",
+        //     alt: "VueJS",
+        // },
         {
             href: "https://nextjs.org/docs",
             src: "/Images/Technologies/NextJs.png",

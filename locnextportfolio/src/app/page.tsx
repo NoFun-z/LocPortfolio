@@ -61,7 +61,7 @@ export default function Home() {
           Angular, jQuery UI, or other frameworks such as Blazor and MVC. My expertise includes
           integrating projects with Azure services like Blob Storage, Service Bus, Trigger Functions,
           coupled with continuous integration and automated deployment using CI/CD pipeline on Azure DevOps. My expertise extends to setting up databases with SQL Server, Azure SQL,
-          programming robust server-side elements through RESTful ASP.NET APIs and C#, and integrating secure payment
+          programming server-side elements through ASP.NET Core RESTful APIs and C#, and integrating secure payment
           services, including platforms like Stripe</p>
 
 
