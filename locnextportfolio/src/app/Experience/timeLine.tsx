@@ -55,7 +55,7 @@ export default function WorkTimeLine() {
                         Aug 2023 - Dec 2023
                     </span>
                     <p className='mt-10 mb-3 font-bold font-mono text-base md:text-lg xl:text-xl' style={{ color: '#838fc9' }}>
-                        Computer Programming Peer Tutor - Niagara College
+                        Computer Program Peer Tutor - Niagara College
                     </p>
                     <ul className="list-disc pl-5 font-mono mb-10 text-base md:text-lg xl:text-xl">
                         <li className='mb-2 text-gray-300'>
@@ -88,7 +88,7 @@ export default function WorkTimeLine() {
                         May 2023 - Sep 2023
                     </span>
                     <p className='mt-10 mb-3 font-bold font-mono text-base md:text-lg xl:text-xl' style={{ color: '#838fc9' }}>
-                        Game Tech - Cineplex - Niagara College Internship
+                        Game Tech - Cineplex (Internship)
                     </p>
                     <ul className="list-disc pl-5 font-mono mb-10 text-base md:text-lg xl:text-xl">
                         <li className='mb-2 text-gray-300'>

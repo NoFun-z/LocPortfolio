@@ -5,6 +5,9 @@ import useImages from '@/hooks/useImages';
 import { Metadata } from 'next'
 import WorkTimeLine from './timeLine';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Hidden, Typography } from '@mui/material';
+import ArrowIconEx from '@/mixes/arrow-icon-ex';
+import ExperienceAccordion from '@/utils/ExperienceAccordion';
 
 export const metadata: Metadata = {
   title: 'My NextJS Portfolio - Loc Pham Experience',
@@ -46,9 +49,14 @@ export default function Experience() {
       <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>Job Experience</p>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='font-mono mb-10 text-base md:text-lg xl:text-xl'>
-        <WorkTimeLine />
+        <Hidden mdUp>
+          <ExperienceAccordion />
+        </Hidden>
+        <Hidden mdDown>
+          <WorkTimeLine />
+        </Hidden>
         <div className='mt-12 p-4 text-gray-300' style={{ backgroundColor: '#4655a0' }}>
-          <span><TipsAndUpdatesIcon style={{color: '#e6b800'}}/></span> I am unwavering in my resolve to prioritize the needs of my clients and constantly seek strategies
+          <span><TipsAndUpdatesIcon style={{ color: '#e6b800' }} /></span> I am unwavering in my resolve to prioritize the needs of my clients and constantly seek strategies
           to enhance my work. By improving processes and welcoming feedback, I aim to surpass expectations and
           achieve long-term success
         </div>
@@ -58,21 +66,41 @@ export default function Experience() {
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <div className='font-mono mb-10 font-medium md:text-lg xl:text-xl'>
         <ul className="list-disc pl-5">
+          {/*Ref1*/}
           <li className='mb-2 text-gray-300'>
-            <span className='hidden md:inline-block'>Gonul Turkdogan -</span>{" "}gturkdogan@niagaracollege.ca
+            <div className='block'>
+              <span className='font-bold'>Gonul Turkdogan</span>
+              <span className='font-thin'>{" "}(Peer Tutor Program Coordinator)</span>
+            </div>
+            <span className='block'>Niagara College Canada</span>
+            <span>gturkdogan@niagaracollege.ca</span>
             <a className='ml-2' href="mailto:gturkdogan@niagaracollege.ca?subject=&body=Dear%20Ms. Gonul Turkdogan:">
               <EmailIcon className='hover:opacity-60' />
             </a>
           </li>
+
+          {/*Ref2*/}
           <li className='mb-2 text-gray-300'>
-            <span className='hidden md:inline-block'>David Stovell - </span>{" "}dstovell@niagaracollege.ca
+            <div className='block'>
+              <span className='font-bold'>David Stovell</span>
+              <span className='font-thin'>{" "}(Senior Professor in Computer Programming and Analysis/ Program Coordinator)</span>
+            </div>
+            <span className='block'>Niagara College Canada</span>
+            <span>dstovell@niagaracollege.ca</span>
             <a className='ml-2' href="mailto:dstovell@niagaracollege.ca?subject=&body=Dear%20Mr. David Stovell:">
               <EmailIcon className='hover:opacity-60' />
             </a>
           </li>
+
+          {/*Ref3*/}
           <li className='mb-2 text-gray-300'>
-            <span className='hidden md:inline-block'>Marsha Badeley - </span>{" "}mbaddeley@niagaracollege.ca
-            <a className='ml-2' href="mailto:mbaddeley@niagaracollege.ca?subject=&body=Dear%20Ms. Marsha Badeley:">
+            <div className='block'>
+              <span className='font-bold'>Mark Hardwick</span>
+              <span className='font-thin'>{" "}(Founder & CEO of Exelby Inc and Professor in Computer Programming)</span>
+            </div>
+            <span className='block'>Niagara College Canada</span>
+            <span>mhardwick@niagaracollege.ca</span>
+            <a className='ml-2' href="mailto:mhardwick@niagaracollege.ca?subject=&body=Dear%20Mr. Mark Hardwick:">
               <EmailIcon className='hover:opacity-60' />
             </a>
           </li>
