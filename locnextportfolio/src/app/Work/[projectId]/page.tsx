@@ -50,7 +50,7 @@ export default function ProjectDetails() {
                 (<Carousel>
                   <video className='w-full' autoPlay controls src={projectData.videoSrc} muted />
                   {...projectData.pictureURL.map(url => (
-                    <img key={url} src={url} alt={projectData.name} className='rounded' />
+                    <img key={url} src={url} alt={projectData.name} className='w-full rounded' />
                   ))}
                 </Carousel>)
                 :
