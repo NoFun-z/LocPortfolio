@@ -59,7 +59,7 @@ export default function WorkTimeLine() {
                     </p>
                     <ul className="list-disc pl-5 font-mono mb-10 text-base md:text-lg xl:text-xl">
                         <li className='mb-2 text-gray-300'>
-                            Guided fellow students in programming in understanding concepts,
+                            Guided 1st and 2nd year students in programming in understanding concepts,
                             debugging code, and conducting thorough code testing in MVC, Javascript, SQL
                         </li>
                         <li className='mb-2 text-gray-300'>

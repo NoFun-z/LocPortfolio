@@ -5,8 +5,7 @@ import useImages from '@/hooks/useImages';
 import { Metadata } from 'next'
 import WorkTimeLine from './timeLine';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Hidden, Typography } from '@mui/material';
-import ArrowIconEx from '@/mixes/arrow-icon-ex';
+import { Hidden } from '@mui/material';
 import ExperienceAccordion from '@/utils/ExperienceAccordion';
 
 export const metadata: Metadata = {
