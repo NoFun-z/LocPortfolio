@@ -17,7 +17,7 @@ export default function Home() {
         className="mb-40 pt-20 w-full flex flex-col-reverse items-center justify-between gap-36 py-6 lg:flex-row">
         <div className='flex flex-col gap-8 text-center lg:text-left'>
           <p className='text-gray-300 font-bold text-lg md:text-2xl xl:text-4xl'>MY NAME IS LOC PHAM</p>
-          <p className='font-mono text-green-600 font-medium text-base md:text-lg xl:text-xl'>A passionate computer programmer</p>
+          <p className='font-mono text-green-600 font-medium text-base md:text-lg xl:text-xl'>A passionate software developer</p>
           <div className="text-gray-300 flex gap-6 justify-center lg:justify-start">
             <a href='https://www.niagaracollege.ca/' target="_blank" rel="noopener noreferrer">
               <Image src="/Images/Home/NC-icon.png"
@@ -56,7 +56,7 @@ export default function Home() {
       <section
         className="font-mono mb-40 pt-20 text-center">
         <p className='text-xl md:text-2xl lg:text-3xl font-bold' style={{ color: '#838fc9' }}>About me</p>
-        <p className='text-gray-300 pt-20 text-base md:text-lg xl:text-xl'>I am a programmer specializing in
+        <p className='text-gray-300 pt-20 text-base md:text-lg xl:text-xl'>I am a software developer specializing in
           developing full-stack .NET applications using modern front-end JavaScript frameworks like React,
           Angular, jQuery UI, or other frameworks such as Blazor and MVC. My expertise includes
           integrating projects with Azure services like Blob Storage, Service Bus, Trigger Functions,
