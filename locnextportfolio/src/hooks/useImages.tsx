@@ -22,6 +22,11 @@ export default function useImages() {
             alt: "Microsoft Azure",
         },
         {
+            href: "https://aws.amazon.com/free/?gclid=CjwKCAiA5L2tBhBTEiwAdSxJXwHdS5PplMvAWqSmo-U3Y8SV27YFnkDflWNYkC8Q4Rdq69N2qfUq_BoCjfUQAvD_BwE&trk=e747cc26-a307-4ae0-981a-6dc5c1cb4121&sc_channel=ps&ef_id=CjwKCAiA5L2tBhBTEiwAdSxJXwHdS5PplMvAWqSmo-U3Y8SV27YFnkDflWNYkC8Q4Rdq69N2qfUq_BoCjfUQAvD_BwE:G:s&s_kwcid=AL!4422!3!453053794209!e!!g!!aws!10705896207!102406402981&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all",
+            src: "/Images/Technologies/AWS.png",
+            alt: "AWS",
+        },
+        {
             href: "https://powerbi.microsoft.com/en-ca/",
             src: "/Images/Technologies/PowerBI.png",
             alt: "Microsoft PowerBi",
@@ -35,6 +40,11 @@ export default function useImages() {
             href: "https://www.mongodb.com/cloud/atlas/register",
             src: "/Images/Technologies/MongoDB.png",
             alt: "MongoDB",
+        },
+        {
+            href: "https://docs.github.com/en",
+            src: "/Images/Technologies/Github.png",
+            alt: "GitHub",
         },
         {
             href: "https://www.python.org/",
@@ -60,6 +70,11 @@ export default function useImages() {
             href: "https://api.jqueryui.com/",
             src: "/Images/Technologies/JqueryUI.png",
             alt: "JqueryUI",
+        },
+        {
+            href: "https://api.jquery.com/",
+            src: "/Images/Technologies/JQuery.png",
+            alt: "Jquery",
         },
         {
             href: "https://angular.io/docs",

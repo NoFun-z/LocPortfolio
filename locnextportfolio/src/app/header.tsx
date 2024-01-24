@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import Footer from './footer'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SchoolIcon from '@mui/icons-material/School';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import WorkspacesIcon from '@mui/icons-material/Workspaces';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -170,6 +171,9 @@ export default function Header(props: any) {
                             <ActiveLink href="/Experience" addStyle="px-3" isMobile={false}>
                                 Experience
                             </ActiveLink>
+                            <ActiveLink href="/Resume" addStyle="px-3" isMobile={false}>
+                                Resume
+                            </ActiveLink>
                             <ActiveLink href="/Work" addStyle="px-3" isMobile={false}>
                                 Work
                             </ActiveLink>
@@ -186,6 +190,9 @@ export default function Header(props: any) {
                     </VerticalActiveLink>
                     <VerticalActiveLink href="/Experience" addStyle="p-2" isMobile={false}>
                         <SchoolIcon style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
+                    </VerticalActiveLink>
+                    <VerticalActiveLink href="/Resume" addStyle="p-2" isMobile={false}>
+                        <AssignmentIcon style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
                     </VerticalActiveLink>
                     <VerticalActiveLink href="/Work" addStyle="p-2" isMobile={false}>
                         <WorkspacesIcon style={{ fontSize: '1.875rem', lineHeight: '2.25rem' }} />
@@ -234,6 +241,9 @@ export default function Header(props: any) {
                         </ActiveLink>
                         <ActiveLink href="/Experience" addStyle="w-full py-6 text-center" isMobile={true}>
                             Experience
+                        </ActiveLink>
+                        <ActiveLink href="/Resume" addStyle="w-full py-6 text-center" isMobile={true}>
+                            Resume
                         </ActiveLink>
                         <ActiveLink href="/Work" addStyle="w-full py-6 text-center" isMobile={true}>
                             Work

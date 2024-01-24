@@ -60,51 +60,7 @@ export default function Experience() {
           achieve long-term success
         </div>
       </div>
-      <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <p className='font-mono mb-10 text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>References</p>
-      <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
-      <div className='font-mono mb-10 font-medium md:text-lg xl:text-xl'>
-        <ul className="list-disc pl-5">
-          {/*Ref1*/}
-          <li className='mb-2 text-gray-300'>
-            <div className='block'>
-              <span className='font-bold'>Gonul Turkdogan</span>
-              <span className='font-thin'>{" "}(Peer Tutor Program Coordinator)</span>
-            </div>
-            <span className='block'>Niagara College Canada</span>
-            <span>gturkdogan@niagaracollege.ca</span>
-            <a className='ml-2' href="mailto:gturkdogan@niagaracollege.ca?subject=&body=Dear%20Ms. Gonul Turkdogan:">
-              <EmailIcon className='hover:opacity-60' />
-            </a>
-          </li>
 
-          {/*Ref2*/}
-          <li className='mb-2 text-gray-300'>
-            <div className='block'>
-              <span className='font-bold'>David Stovell</span>
-              <span className='font-thin'>{" "}(Senior Professor in Computer Programming and Analysis/ Program Coordinator)</span>
-            </div>
-            <span className='block'>Niagara College Canada</span>
-            <span>dstovell@niagaracollege.ca</span>
-            <a className='ml-2' href="mailto:dstovell@niagaracollege.ca?subject=&body=Dear%20Mr. David Stovell:">
-              <EmailIcon className='hover:opacity-60' />
-            </a>
-          </li>
-
-          {/*Ref3*/}
-          <li className='mb-2 text-gray-300'>
-            <div className='block'>
-              <span className='font-bold'>Mark Hardwick</span>
-              <span className='font-thin'>{" "}(Founder & CEO of Exelby Inc and Professor in Computer Programming)</span>
-            </div>
-            <span className='block'>Niagara College Canada</span>
-            <span>mhardwick@niagaracollege.ca</span>
-            <a className='ml-2' href="mailto:mhardwick@niagaracollege.ca?subject=&body=Dear%20Mr. Mark Hardwick:">
-              <EmailIcon className='hover:opacity-60' />
-            </a>
-          </li>
-        </ul>
-      </div>
       <hr className="mb-12 h-1 w-full bg-gradient-to-br from-indigo-500 ..." />
       <p className='font-mono pt-20 mb-10 text-center text-lg md:text-2xl font-bold' style={{ color: '#838fc9' }}>
         Services I offer
