@@ -20,6 +20,10 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.screen-minus-custom {
+  height: calc(100vh - 108.78px);
+}
+
 .search-bar {
   opacity: 0;
   padding-right: 8px;

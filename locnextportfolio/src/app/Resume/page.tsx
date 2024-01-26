@@ -23,7 +23,7 @@ export default function MyResume() {
   }, []);
 
   return (
-    <div className="mt-10 flex flex-col items-center justify-center h-[710px]">
+    <div className="mt-10 flex flex-col items-center justify-center screen-minus-custom">
       <iframe
         ref={iframeRef}
         className="w-full h-full lazy-iframe"
