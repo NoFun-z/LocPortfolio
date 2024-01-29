@@ -54,11 +54,12 @@ export default function Home() {
           <section
             ref={ref}
             className={`relative before:content-[''] before:absolute before:-z-10 before:top-0 
-            before:left-0 before:bg-slate-700 before:w-full before:h-full before:opacity-20
-             before:translate-x-24 before:-rotate-3 opacity-0 font-mono py-20 lg:px-10 mt-10 mb-20 text-center 
+            before:left-0 px-2 before:bg-slate-700 before:w-full before:h-full before:opacity-20
+            opacity-0 font-mono py-20 lg:px-10 mt-10 mb-20 text-center 
              ${inView ? 'animate-left-fadeInSlideIn before:animate-before-about-fadeInSlideIn' : ''}`}>
-            <div className="absolute inset-0 -rotate-6 -z-10 bg-slate-900/40"></div> {/* This div serves as the background */}
-            <p className='text-xl md:text-2xl lg:text-3xl font-bold' style={{ color: '#838fc9' }}>About me</p>
+            <div className="absolute inset-0 hidden md:block md:-rotate-6 -z-10 bg-slate-900/40"></div> {/* This div serves as the background */}
+            <p className='text-xl md:text-2xl lg:text-3xl font-bold'
+              style={{ color: '#838fc9' }}>About me</p>
             <p className='text-gray-300 pt-20 text-base md:text-lg xl:text-xl'>
               I'm a C# .NET developer skilled in ASP.NET Core, RESTful API, React, Angular, jQuery UI, Blazor,
               and MVC. My expertise includes server-side and client-side development, cloud integration
@@ -89,7 +90,9 @@ export default function Home() {
             ref={ref}
             className={`font-mono mb-32 pt-20 text-center lg:px-10 opacity-0
             ${inView ? 'animate-right-fadeInSlideIn' : ''}`}>
-            <p className='text-xl md:text-2xl lg:text-3xl  font-bold' style={{ color: '#838fc9' }}>Technologies & Tools I use</p>
+            <p className='text-xl md:text-2xl lg:text-3xl  font-bold rounded-md bg-slate-900/50
+            md:bg-indigo-950/40 inline-block py-3 px-12'
+              style={{ color: '#838fc9' }}>Technologies & Tools I use</p>
             <div className='pt-20 text-lg md:text-xl flex flex-wrap items-center justify-center gap-6'>
               {techImages.map(ti => (
                 <a key={ti.alt} href={ti.href} target="_blank" rel="noopener noreferrer" className='relative group'>

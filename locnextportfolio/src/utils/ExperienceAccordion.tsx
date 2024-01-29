@@ -24,13 +24,13 @@ export default function ExperienceAccordion() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <ul className="list-disc pl-5 font-mono mb-4 text-base md:text-lg xl:text-xl">
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Developed websites, data solutions, and software by with React, Angular, .NET REST API, MVC, and ASP.NET
                         </li>
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Constructed database models from the ground up, utilizing SQL and Azure for optimal performance and functionality
                         </li>
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Engaged in regular client discussions, gathering feedback, and deployed continuous improvement throughout the software development life cycle
                         </li>
                     </ul>
@@ -56,17 +56,17 @@ export default function ExperienceAccordion() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <ul className="list-disc pl-5 font-mono mb-4 text-base md:text-lg xl:text-xl">
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Guided 1st and 2nd year students in programming in understanding concepts,
                             debugging code, and conducting thorough code testing in MVC, Javascript, SQL
                         </li>
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Offered effective solutions to coding challenges
                         </li>
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Managed multiple student projects, providing support in organizing and optimizing code
                         </li>
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Created reports and provided solutions to aid students in their improvement with the
                             peer tutor coordinator
                         </li>
@@ -93,16 +93,16 @@ export default function ExperienceAccordion() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <ul className="list-disc pl-5 font-mono mb-4 text-base md:text-lg xl:text-xl">
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Executed networking tasks, established LANs, managed hardware, and maintained databases for the Cineplex game system
                         </li>
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Developed and deployed a community-based full-stack ASP.NET MVC application designed for seamless meetings management integrated auto-mailing system for Niagara College Committee Advisors
                         </li>
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Led the community-based project presentation management, including slides, github source control pull requests
                         </li>
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Utilized Agile methodology, managing weekly sprints and tasks. Conducted daily code testing, improvements, and attended client meetings
                         </li>
                     </ul>
@@ -128,17 +128,17 @@ export default function ExperienceAccordion() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <ul className="list-disc pl-5 font-mono mb-4 text-base md:text-lg xl:text-xl">
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Provided hands-on support at the IT Help Desk, troubleshooting networking issues,
                             addressing hardware and general IT concerns
                         </li>
 
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Wrote detailed customer report forms, documenting solutions,
                             and ensuring effective communication of technical resolutions
                         </li>
 
-                        <li className='mb-2 text-gray-300'>
+                        <li className='mb-2 text-gray-300 text-sm md:text-base xl:text-lg'>
                             Collaborated with IT team members to implement and maintain efficient help desk procedures,
                             improvement of support services
                         </li>

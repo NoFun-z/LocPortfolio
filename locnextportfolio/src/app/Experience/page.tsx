@@ -158,7 +158,7 @@ export default function Experience() {
                       height={400}
                     />
                   </div>
-                  <p className='w-full'>{si.description}</p>
+                  <p className='w-full text-gray-300 text-sm md:text-base xl:text-lg'>{si.description}</p>
                 </div>
               </a>
             )}
