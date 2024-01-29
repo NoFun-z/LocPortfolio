@@ -1,12 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import useImages from '@/hooks/useImages';
-import { Metadata } from 'next'
 import DownloadButton from './DownloadButton';
-
-export const metadata: Metadata = {
-  title: 'My NextJS Portfolio - Loc Pham Bio',
-  description: 'Welcome to my Next.js portfolio website !!!',
-}
+import { InView } from "react-intersection-observer"
 
 export default function Home() {
   const { techImages } = useImages();
@@ -46,44 +43,65 @@ export default function Home() {
           <Image
             src="/Images/Canva-Avatar.png"
             alt="avatar"
-            width={360}
-            height={360}
-            className='w-full'
+            width={380}
+            height={380}
+            className='w-full md:w-[420px] xl:w-[460px]'
           />
         </div>
       </section>
-      <hr className="mx-auto mb-20 h-1 w-1/2 bg-gradient-to-br from-indigo-500 ..." />
-      <section
-        className="font-mono mb-40 pt-20 text-center">
-        <p className='text-xl md:text-2xl lg:text-3xl font-bold' style={{ color: '#838fc9' }}>About me</p>
-        <p className='text-gray-300 pt-20 text-base md:text-lg xl:text-xl'>I am a software developer specializing in
-          developing full-stack .NET applications using modern front-end JavaScript frameworks like React,
-          Angular, jQuery UI, or other frameworks such as Blazor and MVC. My expertise includes
-          integrating projects with Azure services like Blob Storage, Service Bus, Trigger Functions,
-          coupled with continuous integration and automated deployment using CI/CD pipeline on Azure DevOps. My expertise extends to setting up databases with SQL Server, Azure SQL,
-          programming server-side elements through ASP.NET Core RESTful APIs and C#, and integrating secure payment
-          services, including platforms like Stripe</p>
+      <InView triggerOnce threshold={0.2}>
+        {({ inView, ref, entry }) => (
+          <section
+            ref={ref}
+            className={`relative before:content-[''] before:absolute before:-z-10 before:top-0 
+            before:left-0 before:bg-slate-700 before:w-full before:h-full before:opacity-20
+             before:translate-x-24 before:-rotate-3 opacity-0 font-mono py-20 lg:px-10 mt-10 mb-20 text-center 
+             ${inView ? 'animate-left-fadeInSlideIn before:animate-before-about-fadeInSlideIn' : ''}`}>
+            <div className="absolute inset-0 -rotate-6 -z-10 bg-slate-900/40"></div> {/* This div serves as the background */}
+            <p className='text-xl md:text-2xl lg:text-3xl font-bold' style={{ color: '#838fc9' }}>About me</p>
+            <p className='text-gray-300 pt-20 text-base md:text-lg xl:text-xl'>
+              I'm a C# .NET developer skilled in ASP.NET Core, RESTful API, React, Angular, jQuery UI, Blazor,
+              and MVC. My expertise includes server-side and client-side development, cloud integration
+              with Azure/AWS, and implementing CI/CD pipelines via Azure DevOps. My expertise spans
+              SQL Server, Azure SQL, AWS RDS setup, and Stripe payment integration. I apply Agile
+              methodologies to organize team tasks using Kanban boards on Trello, Azure DevOps, or Jira,
+              containerize applications with Docker for streamlined development and deployment</p>
 
 
-        <p className='text-gray-300 pt-8 text-base md:text-lg xl:text-xl'>My commitment to promoting creativity is demonstrated by my
-          constant exploration of modern technologies and approaches. I get satisfaction from coming up with
-          cutting-edge methods that enable me to create ground-breaking solutions that meet changing consumer
-          and market demands</p>
-      </section>
-      <hr className="mx-auto mb-20 h-1 w-1/2 bg-gradient-to-br from-indigo-500 ..." />
-      <section
-        className="font-mono mb-32 pt-20 text-center">
-        <p className='text-xl md:text-2xl lg:text-3xl  font-bold' style={{ color: '#838fc9' }}>Technologies & Tools I use</p>
-        <div className='pt-20 text-lg md:text-xl flex flex-wrap items-center justify-center gap-6'>
-          {techImages.map(ti => (
-            <a key={ti.alt} href={ti.href} target="_blank" rel="noopener noreferrer" className='relative group'>
-              <Image className='hover:cursor-pointer filter-none hover:grayscale transition-filter'
-                src={ti.src} alt={ti.alt} width={60} height={60}
-                style={{ width: 'auto', height: 'auto' }} />
-            </a>
-          ))}
-        </div>
-      </section>
+            <p className='text-gray-300 pt-8 text-base md:text-lg xl:text-xl'>My commitment to promoting creativity is demonstrated by my
+              constant exploration of modern technologies and approaches. I get satisfaction from coming up with
+              cutting-edge methods that enable me to create ground-breaking solutions that meet changing consumer
+              and market demands</p>
+          </section>
+        )}
+      </InView>
+      <InView triggerOnce threshold={0.3}>
+        {({ inView, ref, entry }) => (
+          <hr
+            ref={ref}
+            className={`mx-auto mb-20 h-2 w-0 bg-gradient-to-br from-indigo-500 ...
+            ${inView ? 'animate-hr-fadeInSlideIn' : ''}`} />
+        )}
+      </InView>
+      <InView triggerOnce threshold={0.2}>
+        {({ inView, ref, entry }) => (
+          <section
+            ref={ref}
+            className={`font-mono mb-32 pt-20 text-center lg:px-10 opacity-0
+            ${inView ? 'animate-right-fadeInSlideIn' : ''}`}>
+            <p className='text-xl md:text-2xl lg:text-3xl  font-bold' style={{ color: '#838fc9' }}>Technologies & Tools I use</p>
+            <div className='pt-20 text-lg md:text-xl flex flex-wrap items-center justify-center gap-6'>
+              {techImages.map(ti => (
+                <a key={ti.alt} href={ti.href} target="_blank" rel="noopener noreferrer" className='relative group'>
+                  <Image className='hover:cursor-pointer filter-none hover:grayscale transition-filter'
+                    src={ti.src} alt={ti.alt} width={60} height={60}
+                    style={{ width: 'auto', height: 'auto' }} />
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+      </InView>
     </div>
   )
 }

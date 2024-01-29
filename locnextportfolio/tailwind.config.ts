@@ -1,3 +1,4 @@
+import zIndex from '@mui/material/styles/zIndex'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -54,6 +55,34 @@ const config: Config = {
           '80%': { right: '4%' },
           '100%': { right: '2%' },
         },
+        'hr-fadeInSlideIn': {
+          '0%': { width: '0' },
+          '100%': { width: '50%' },
+        },
+        'full-hr-fadeInSlideIn': {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+        'left-fadeInSlideIn': {
+          '0%': { opacity: '0', transform: 'translateX(-100px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'before-about-fadeInSlideIn': {
+          '0%': { opacity: '0', transform: 'translateX(-100px)' },
+          '100%': { opacity: '0.3', transform: 'translateX(0)' },
+        },
+        'right-fadeInSlideIn': {
+          '0%': { opacity: '0', transform: 'translateX(100px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'bottom-fadeInSlideIn': {
+          '0%': { opacity: '0', transform: 'translateY(100px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'idea-fadeInSlideIn': {
+          '0%': { transform: 'translateX(-100%)'},
+          '100%': { transform: 'translateX(0)'},
+        },
       },
       animation: {
         'open-menu': 'open-menu 0.3s ease-in-out forwards',
@@ -63,9 +92,13 @@ const config: Config = {
         'open-vertical-navbar': 'open-vertical-navbar 0.5s ease-in-out forwards',
         'open-vertical-contact': 'open-vertical-contact 0.5s ease-in-out forwards',
         'open-back-to-top': 'open-back-to-top 0.5s ease-in-out forwards',
-      },
-      '.important-class': {
-        important: true,
+        'hr-fadeInSlideIn': 'hr-fadeInSlideIn 0.6s ease-in-out forwards',
+        'full-hr-fadeInSlideIn': 'full-hr-fadeInSlideIn 0.8s ease-in-out forwards',
+        'left-fadeInSlideIn': 'left-fadeInSlideIn 1.5s ease forwards',
+        'before-about-fadeInSlideIn': 'before-about-fadeInSlideIn 1.6s ease forwards',
+        'right-fadeInSlideIn': 'right-fadeInSlideIn 1.5s ease forwards',
+        'bottom-fadeInSlideIn': 'bottom-fadeInSlideIn 1.5s ease forwards',
+        'idea-fadeInSlideIn': 'idea-fadeInSlideIn 1.3s ease-out forwards',
       },
     },
   },
