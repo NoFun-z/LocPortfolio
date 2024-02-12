@@ -32,12 +32,14 @@ export default function MyResume() {
   }, []);
 
   return (
-    <div className="mt-10 bg-slate-700 flex flex-col items-center justify-center screen-minus-custom">
+    <>
+      <div ref={iframeRef} className="mt-10 bg-slate-700 flex flex-col items-center justify-center screen-minus-custom">
 
-      <Worker ref={iframeRef} workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-        <Viewer plugins={[defaultLayoutPluginInstance]} fileUrl="/Files/LocPham-Resume.pdf" />
-      </Worker>
-    </div>
+        <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+          <Viewer plugins={[defaultLayoutPluginInstance]} fileUrl="/Files/LocPham-Resume.pdf" />
+        </Worker>
+      </div>
+    </>
   )
 };
 
