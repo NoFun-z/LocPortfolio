@@ -106,7 +106,7 @@ export default function useProjects() {
       pictureURL: ["/Images/Projects/React-RapidVids.jpg", "/Images/Projects/React-RapidVids-2.jpg",
         "/Images/Projects/React-RapidVids-3.jpg", "/Images/Projects/React-RapidVids-4.jpg",
         "/Images/Projects/React-RapidVids-5.jpg", "/Images/Projects/React-RapidVids-6.jpg"],
-      publishedLink: "",
+      publishedLink: "https://locvtube.com/",
       githubLink: "https://github.com/NoFun-z/Youtube-Clone",
       favourite: true,
       videoSrc: "/Videos/React-RapidVids.mp4",
